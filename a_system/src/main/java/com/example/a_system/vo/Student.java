@@ -1,5 +1,9 @@
 package com.example.a_system.vo;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
+@JacksonXmlRootElement(localName = "A系统学生")
 public class Student {
     private String acc;
     private String password;
@@ -17,6 +21,7 @@ public class Student {
         this.sex = sex;
     }
 
+    @JacksonXmlProperty(localName = "学生账号A")
     public String getAcc() {
         return acc;
     }
@@ -25,6 +30,7 @@ public class Student {
         this.acc = acc;
     }
 
+    @JacksonXmlProperty(localName = "学生密码A")
     public String getPassword() {
         return password;
     }
@@ -33,6 +39,7 @@ public class Student {
         this.password = password;
     }
 
+    @JacksonXmlProperty(localName = "创建日期A")
     public String getCreateDate() {
         return createDate;
     }
@@ -41,6 +48,7 @@ public class Student {
         this.createDate = createDate;
     }
 
+    @JacksonXmlProperty(localName = "学生编号A")
     public String getSno() {
         return sno;
     }
@@ -49,6 +57,7 @@ public class Student {
         this.sno = sno;
     }
 
+    @JacksonXmlProperty(localName = "学生姓名A")
     public String getSname() {
         return sname;
     }
@@ -57,6 +66,7 @@ public class Student {
         this.sname = sname;
     }
 
+    @JacksonXmlProperty(localName = "学生性别A")
     public String getSex() {
         return sex;
     }

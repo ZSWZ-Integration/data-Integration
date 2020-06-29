@@ -1,6 +1,7 @@
 package com.example.a_system.po.Course;
 
 public class Course {
+
     private String Cno;
     private String Cname;
     private String teacher;

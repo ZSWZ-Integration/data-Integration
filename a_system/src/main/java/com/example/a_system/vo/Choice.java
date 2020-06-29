@@ -1,16 +1,23 @@
 package com.example.a_system.vo;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
+@JacksonXmlRootElement(localName = "A系统学生选课信息")
 public class Choice {
     private String cno;
-    private String sno;
+    private Student student;
     private String grade;
 
-    public Choice(String cno, String sno, String grade) {
+    public Choice(String cno, Student student, String grade) {
+
         this.cno = cno;
-        this.sno = sno;
+        this.student = student;
         this.grade = grade;
+
     }
 
+    @JacksonXmlProperty(localName = "课程编号A")
     public String getCno() {
         return cno;
     }
@@ -19,14 +26,16 @@ public class Choice {
         this.cno = cno;
     }
 
-    public String getSno() {
-        return sno;
+    @JacksonXmlProperty(localName = "学生信息A")
+    public Student getStudent() {
+        return student;
     }
 
-    public void setSno(String sno) {
-        this.sno = sno;
+    public void setStudent(Student student) {
+        this.student = student;
     }
 
+    @JacksonXmlProperty(localName = "学生成绩A")
     public String getGrade() {
         return grade;
     }

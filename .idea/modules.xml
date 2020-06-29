@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/a_system/a_system.iml" filepath="$PROJECT_DIR$/a_system/a_system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/center_system/center_system.iml" filepath="$PROJECT_DIR$/center_system/center_system.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/data-Integration.iml" filepath="$PROJECT_DIR$/.idea/data-Integration.iml" />
     </modules>
   </component>
