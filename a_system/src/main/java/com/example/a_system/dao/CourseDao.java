@@ -1,8 +1,9 @@
 package com.example.a_system.dao;
 
 import com.example.a_system.dao.Repository.CourseRepository;
-import com.example.a_system.po.Course.Course;
-import com.example.a_system.po.Course.CourseMapper;
+import com.example.a_system.po.Course.*;
+
+import com.example.a_system.vo.CourseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -47,9 +48,9 @@ public class CourseDao implements CourseRepository {
     }
 
     @Override
-    public boolean chooseCourse(String Sname,String Cno) {
+    public boolean chooseCourse(String Sno,String Cno) {
         try{
-            String Sno=jdbcTemplate.queryForObject("select Sno from student where Sname=?",String.class,Sname);
+            //String Sno=jdbcTemplate.queryForObject("select Sno from student where Sname=?",String.class,Sname);
             jdbcTemplate.update("insert into `take_course` (Cno,Sno,grade) values (?,?,?)",Cno,Sno,0);
             return true;
         }catch (Exception e) {
@@ -59,9 +60,9 @@ public class CourseDao implements CourseRepository {
     }
 
     @Override
-    public boolean dropCourse(String Sname,String Cno) {
+    public boolean dropCourse(String Sno,String Cno) {
         try{
-            String Sno=jdbcTemplate.queryForObject("select Sno from student where Sname=?",String.class,Sname);
+            //String Sno=jdbcTemplate.queryForObject("select Sno from student where Sname=?",String.class,Sname);
             jdbcTemplate.update("delete from `take_course` where Cno=? and Sno=?",Cno,Sno);
             return true;
         }catch (Exception e) {
@@ -71,10 +72,14 @@ public class CourseDao implements CourseRepository {
     }
 
     @Override
-    public List<Course> getStudentCourse(String Sname) {
-        String Sno=jdbcTemplate.queryForObject("select Sno from student where Sname=?",String.class,Sname);
-        return jdbcTemplate.query("select * from course where course.Cno in (select Cno from takeCourse where Sno=?);",new CourseMapper(),Sno);
-
+    public List<Course> getStudentCourse(String Sno) {
+        //String Sno=jdbcTemplate.queryForObject("select Sno from student where Sname=?",String.class,Sname);
+        try {
+            return jdbcTemplate.query("select * from course where course.Cno in (select Cno from takeCourse where Sno=?);", new CourseMapper(), Sno);
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
     }
 
     @Override
@@ -83,7 +88,14 @@ public class CourseDao implements CourseRepository {
     }
 
     @Override
-    public List<Course> getSharedCourse(){  //外院系的共享课程本院的share字段为0
-        return jdbcTemplate.query("select * from course where share=1",new CourseMapper());
+    public List<CourseVO> getSharedCourse(){  //外院系的共享课程本院的share字段为0
+        return jdbcTemplate.query("select * from course where share=1",new CourseVOMapper());
     }
+
+    @Override
+    public Choice getChoiceInfo(String sno, String cno) {
+        return jdbcTemplate.queryForObject("select * from takecourse where Sno=? and Cno=?",new ChoiceMapper(),sno,cno);
+    }
+
+
 }

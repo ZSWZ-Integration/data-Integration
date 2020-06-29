@@ -16,7 +16,12 @@ public class UserDaoTest {
 
     @Test
     public void loginTest(){
-        System.out.println(userRepository.login("100","123456"));
+        System.out.println(userRepository.login("201926","123456"));
+    }
+
+    @Test
+    public void getStudentInfoTest(){
+        userRepository.getStudentInfo("01");
     }
 
 }

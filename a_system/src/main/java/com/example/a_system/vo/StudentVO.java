@@ -4,7 +4,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 @JacksonXmlRootElement(localName = "A系统学生")
-public class Student {
+public class StudentVO {
     private String acc;
     private String password;
     private String createDate;
@@ -12,7 +12,7 @@ public class Student {
     private String sname;
     private String sex;
 
-    public Student(String acc, String password, String createDate, String sno, String sname, String sex) {
+    public StudentVO(String acc, String password, String createDate, String sno, String sname, String sex) {
         this.acc = acc;
         this.password = password;
         this.createDate = createDate;
