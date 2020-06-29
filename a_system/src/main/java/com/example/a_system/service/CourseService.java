@@ -45,11 +45,11 @@ public class CourseService {
 
     }
 
-    public List<Course> GetStudentCourse(String Sno){
+    public List<Course> getStudentCourse(String Sno){
         return courseRepository.getStudentCourse(Sno);
     }
 
-    public List<Course> GetAllCourse(){
+    public List<Course> getAllCourse(){
         return courseRepository.getAllCourse();
     }
 
