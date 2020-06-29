@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'educationalSystem_B',
 ]
 
 MIDDLEWARE = [
@@ -76,12 +77,32 @@ WSGI_APPLICATION = 'system_b.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'mydatabase',
-        'USER': 'mydatabaseuser',
-        'PASSWORD': 'mypassword',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        # 'ENGINE': 'django.db.backends.oracle',
+        # 'NAME': 'mydatabase',
+        # 'USER': 'mydatabaseuser',
+        # 'PASSWORD': 'mypassword',
+        # 'HOST': '127.0.0.1',
+        # 'PORT': '5432',
+
+         # 'ENGINE': 'sql_server.pyodbc',
+         # 'NAME': 'b_system',
+         # 'USER': "sa",
+         # 'PASSWORD': 'root',
+         # 'HOST': '127.0.0.1',
+         # 'PORT': '1433',
+         #  'OPTIONS': {
+         #      'driver':'SQL Server Native Client 11.0',
+         #      'MARS_Connection': True,
+         # },
+        # 'ENGINE': 'sqlserver',
+        # 'NAME': 'DjangoTest',
+        # 'HOST': '127.0.0.1',
+        # 'PORT': '1433',
+        # 'USER': 'sa',
+        # 'PASSWORD': 'root',
+        # 'OPTIONS': {
+        #     'DRIVER': 'SQL Server Native Client 10.0',
+        # },
     }
 }
 
