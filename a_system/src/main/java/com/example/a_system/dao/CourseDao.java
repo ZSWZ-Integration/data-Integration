@@ -93,6 +93,11 @@ public class CourseDao implements CourseRepository {
     }
 
     @Override
+    public int getACoursesNum() {
+        return jdbcTemplate.queryForObject("select count(*) from course where type='A'",Integer.class);
+    }
+
+    @Override
     public Choice getChoiceInfo(String sno, String cno) {
         return jdbcTemplate.queryForObject("select * from takecourse where Sno=? and Cno=?",new ChoiceMapper(),sno,cno);
     }

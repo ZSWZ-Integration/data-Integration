@@ -8,13 +8,12 @@ def index(request):
     return HttpResponse("This is SystemB index")
 
 def addCourse(request):
-    cno=request.GET.get("cno");
     cname=request.GET.get("cname");
     place=request.GET.get("place");
     teacher=request.GET.get("teacher");
     credit=request.GET.get("credit");
     share=request.GET.get("share");
-    result=course.addCourse(cno,cname,place,teacher,credit,share);
+    result=course.addCourse(cname,place,teacher,credit,share);
     return HttpResponse(result)
 
 def deleteCourse(request):

@@ -31,9 +31,13 @@ cur = conn.cursor()
 
 
 
-def addCourse(Cno,Cname,place,teacher,credit,share):
+def addCourse(Cname,place,teacher,credit,share):
     print("addCourse...")
     try:
+        sql=" select count(*) from course where id like 'b%'"
+        num=(cur.execute(sql).fetchall())[0][0];
+        Cno="b"+str(num+1);
+        print("Cno is "+Cno);
         sql="insert into course(id,name,credit,teacher,campus,share) values ('%s','%s','%s','%s','%s','%s')"
         cur.execute(sql % (Cno,Cname,credit,teacher,place,share))
         conn.commit()

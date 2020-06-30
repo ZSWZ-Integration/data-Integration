@@ -74,8 +74,10 @@ export default {
             console.log(msg);
         },
         dropClass(cno){
+            
             dropCourse(cno, this.sno).then(res => {
                 if(res.data == true){
+                    this.classes = this.classes.filter(item => item.cno != cno);
                     this.Alert("退课成功");
                 }else {
                     this.Alert("退课失败")

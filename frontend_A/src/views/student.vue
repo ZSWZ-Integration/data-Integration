@@ -40,7 +40,16 @@
                         <td>{{ item.teacher }}</td>
                         <td>{{ item.ctime }}</td>
                         <td>{{ item.credit }}</td>
-                        <td><v-btn @click="chooseClass(item.cno)">选课</v-btn></td>
+                        <td>
+                            <v-btn 
+                                @click="chooseClass(item.cno)"
+                                v-if="item.couldChoose"
+                            >选课</v-btn>
+                            <v-btn
+                                v-else
+                                disabled
+                            >非共享课</v-btn>
+                        </td>
                     </tr>
                 </tbody>
             </template>
@@ -54,11 +63,12 @@ import {getAllCourses, chooseCourse} from "../request/api";
 export default {
     data() {
         return {
+            //couldChoose为是否可以选，主要判断share和cno中的type，如果是非本院且share为0，则不可选，其他情况都可选
             classes: [
-                {cno: "1", cname: "数据集成", teacher: "刘峰", ctime: "2019-01-01", credit: "1", share: "0", ctype: "b"},
-                {cno: "2", cname: "数据集成2", teacher: "刘峰2", ctime: "2019-01-02", credit: "2", share: "1", ctype: "c"},
-                {cno: "3", cname: "数据集成3", teacher: "刘峰3", ctime: "2019-01-03", credit: "3", share: "0", ctype: "a"},
-                {cno: "4", cname: "数据集成4", teacher: "刘峰4", ctime: "2019-01-04", credit: "4", share: "0", ctype: "a"},
+                {cno: "1", cname: "数据集成", teacher: "刘峰", ctime: "2019-01-01", credit: "1", share: "0", ctype: "b", couldChoose: true},
+                {cno: "2", cname: "数据集成2", teacher: "刘峰2", ctime: "2019-01-02", credit: "2", share: "1", ctype: "c", couldChoose: true},
+                {cno: "3", cname: "数据集成3", teacher: "刘峰3", ctime: "2019-01-03", credit: "3", share: "0", ctype: "a", couldChoose: true},
+                {cno: "4", cname: "数据集成4", teacher: "刘峰4", ctime: "2019-01-04", credit: "4", share: "0", ctype: "a", couldChoose: false},
             ],
             errMsg: "",
             dialogErr: false,
@@ -92,6 +102,14 @@ export default {
     }, mounted(){
         getAllCourses().then(res => {
             this.classes = res.data;
+            //判断课程是否可选，非本院且share为0则不可选。
+            this.classes.foreach(course => {
+                if(course.cno.substring(0, 1) != "A" && course.share == "0"){
+                    course.couldChoose = false;
+                }else {
+                    course.couldChoose = true;
+                }
+            })
         }).catch(err => {
             err;
             this.Alert("something went wronge.");
