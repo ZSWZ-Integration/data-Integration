@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6be8cfc-2c64-4e32-8676-1ce9116dc891" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__commons_codec_commons_codec_1_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/XmlService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../a_system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/CourseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/Repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/Repository/CourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/ChoiceVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/ChoiceVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/CourseVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/CourseVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../center_system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../center_system/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../center_system/src/main/java/com/example/center_system/controller/XmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../center_system/src/main/java/com/example/center_system/controller/XmlController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../center_system/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../center_system/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend_A/src/views/student.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend_A/src/views/student.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend_A/src/views/studentDropClass.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend_A/src/views/studentDropClass.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py" beforeDir="false" afterPath="$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/educationalSystem_B/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/educationalSystem_B/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="d6be8cfc-2c64-4e32-8676-1ce9116dc891" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,11 +19,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="60" column="37" lean-forward="true" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+            <state relative-caret-position="117">
+              <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -75,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/user/userService.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
+            <state relative-caret-position="79">
               <caret line="30" column="57" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="57" />
             </state>
           </provider>
@@ -163,7 +143,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="693" />
     <option name="y" value="3" />
     <option name="width" value="981" />
@@ -294,7 +274,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="735" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2494043" />
@@ -364,13 +344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/user/userService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="30" column="57" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/educationalSystem_B/vo/choiceVO.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -427,11 +400,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="60" column="37" lean-forward="true" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+        <state relative-caret-position="117">
+          <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/user/userService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="30" column="57" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="57" />
         </state>
       </provider>
     </entry>

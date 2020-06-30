@@ -39,13 +39,13 @@ INSERT INTO `student` VALUES ('201901','123456','2019-06-30 16:00:00','01','Âè∂Ë
 
 DROP TABLE IF EXISTS `take_course`;
 
-CREATE TABLE `takecourse` (
+CREATE TABLE `take_course` (
   `Cno` varchar(255) DEFAULT NULL,
   `Sno` varchar(255) DEFAULT NULL,
   `grade` int(11) DEFAULT NULL,
   UNIQUE KEY `uniqueData` (`Cno`,`Sno`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-alter table `takeCourse` convert to character set utf8;
+alter table `take_course` convert to character set utf8;
 
 
-INSERT INTO `takeCourse` VALUES ('A01','01',90);
+INSERT INTO `take_course` VALUES ('A01','01',90);
