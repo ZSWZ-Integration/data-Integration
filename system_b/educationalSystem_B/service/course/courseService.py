@@ -1,5 +1,8 @@
 from educationalSystem_B import models;
 from educationalSystem_B.models import Choose
+from educationalSystem_B.service.user import userService
+from educationalSystem_B.vo.choiceVO import Choice
+from educationalSystem_B.vo.courseVO import Course
 
 
 # import pymssql
@@ -69,11 +72,6 @@ def updateCourse(Cno,Cname,place,teacher,credit,share):
         conn.commit()
         print("更新课程成功！")
         return True
-        # sql = "select * from [course]"  # 查询语句
-        # cur.execute(sql)
-        # rows = cur.fetchall()  # list
-        # for row in rows:
-        #     print(row)
     except BaseException as e:
         print(e)
         print("更新课程失败...")
@@ -90,7 +88,12 @@ def chooseCourse(Sno,Cno):
             print("选课成功！")
             return True
         else:   #Todo:选的是外院系的课，需要调用集成服务器
-            pass
+            student=userService.getStudentInfo(Sno)   #studentVO
+            student.setPwd("noPassword")  #重设密码
+            choiceInfo=getChoiceInfo(Sno,Cno)
+            choice=Choice(choiceInfo[0],student,choiceInfo[2])  #choiceVO
+
+
             return False
 
     except BaseException as e:
@@ -109,7 +112,11 @@ def dropCourse(Sno,Cno):
             print("删除选课成功！")
             return True
         else:       #Todo:退外院系的课，需要调用集成服务器
-            pass
+            student = userService.getStudentInfo(Sno)  # studentVO
+            choiceInfo = getChoiceInfo(Sno, Cno)
+            choice = Choice(choiceInfo[0], student, choiceInfo[2])  # choiceVO
+
+
             return False
 
     except BaseException as e:
@@ -122,9 +129,9 @@ def getStudentCourse(Sno):
     try:
         sql="select * from [course] where id=(select course_id from choose where student_id='%s')"
         cur.execute(sql % Sno)
-        rows = cur.fetchall()  # list
+        courses = cur.fetchall()  # list
         print("获取选课成功!")
-        return rows
+        return courses
     except BaseException as e:
         print(e)
         print ("获取选课失败...")
@@ -135,26 +142,74 @@ def getAllCourse():
     try:
         sql="select * from [course]"
         cur.execute(sql )
-        rows = cur.fetchall()  # list
+        courses = cur.fetchall()  # list
         print("获取全部课程成功！")
-        return rows
+        return courses
     except BaseException as e:
         print(e)
         print("获取全部课程失败...")
         return False
 
-def getOtherCourses(type):
+def getOtherCourses(type):  #获取外院的共享课程
     print("getOtherCourses")
     try:        #Todo:使用集成服务器获取外院系课程
         if(type=="A"):  #获取外院A的共享课程
-            pass
+
+
             return False
 
         elif(type=="C"):    #获取外院C的共享课程
-            pass
+
+
             return False
 
     except BaseException as e:
         print(e)
         print ("获取外院系课程失败...")
         return False
+
+def getShareCourses():      #获取本院系的共享课程
+    try:
+        sql="select * from course where share='1'"
+        coursesInfo=cur.execute(sql).fetchall()   #list,每个元素是tuple元组
+        courses=[]
+        for courseInfo in coursesInfo:
+            c=Course(courseInfo[0],courseInfo[1],courseInfo[2],courseInfo[3],courseInfo[4],courseInfo[5])
+            courses.append(c)
+        return courses;
+    except BaseException as e:
+        print(e)
+        return None
+
+def getChoiceInfo(sno,cno):    #获取选课信息
+    try:
+        sql="select * from choose where course_id='%s' and student_id='%s'"
+        choiceInfo = (cur.execute(sql % (cno,sno)).fetchall())[0]   #元组tuple
+        return choiceInfo
+    except BaseException as e:
+        print(e)
+        return None
+
+def shareCourses():     #共享本院系的课程
+    courses=getShareCourses()       #是list，每个元素是courseVO对象
+    for c in courses:
+        c.setShare("0")
+    #Todo:调用集成服务器
+
+    return False
+
+def othersAddCourse():  #外院系学生的选课
+    #Todo:解析xml文件，转成StudentVO和ChoiceVO对象
+
+
+    #将外院系学生的信息加入本院系的学生表里，并把选课信息加入本院的选课表里(周沛辰写)
+
+    return False
+
+def othersDeleteCourse():   #外院系学生的退课
+    #Todo: 解析xml文件，获取学生编号sno和课程编号cno即可
+
+
+    #调用deleteCourse，若该学生没有选本院系的课了，则删除该学生的学生信息(周沛辰写)
+
+    return False

@@ -63,3 +63,18 @@ def login(request):
     password=request.GET.get("password")
     result=user.login(username,password)
     return HttpResponse(result)
+
+#XML Controller
+#Todo:完善接收xml的controller
+
+def getSharedCourses(request):      #获取本院系的共享课程
+    result=course.shareCourses()
+    return HttpResponse(result)
+
+def othersAddCourse(request):       #外院系的选课
+    result=course.othersAddCourse()
+    return HttpResponse(result)
+
+def othersDeleteCourse(request):    #外院系的退课
+    result=course.othersDeleteCourse()
+    return HttpResponse(result)
