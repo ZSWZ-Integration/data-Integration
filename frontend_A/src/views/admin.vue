@@ -13,6 +13,8 @@
     <v-dialog
         v-model="dialogEdit"
         width="800"
+        persistent
+        no-click-animation
     >
         <v-card>
             <v-card-title>编辑课程</v-card-title>
@@ -59,7 +61,76 @@
                     <v-btn
                         class="mr-5 ml-5 mb-5"
                         color="error"
-                        @click="cancelEdit"
+                        @click="dialogEdit=false"
+                    >取消
+                    </v-btn>
+                </v-form>
+            </v-card-text>
+        </v-card>
+    </v-dialog>
+    <v-dialog
+        v-model="dialogNew"
+        width="800"
+        persistent
+        no-click-animation
+    >
+        <v-card>
+            <v-card-title>新建课程</v-card-title>
+            <v-card-text>
+                <v-form
+                    v-model="valid"
+                >
+                    <v-text-field
+                        v-model="newClass.cname"
+                        label="课程名称"
+                        :rules="nameRule"
+                        clearable
+                        required
+                        flat
+                        outlined
+                    ></v-text-field>
+                    <v-text-field
+                        v-model="newClass.teacher"
+                        label="课程教师"
+                        :rules="teacherRule"
+                        clearable
+                        required
+                        flat
+                        outlined
+                    ></v-text-field>
+                    <v-text-field
+                        v-model="newClass.ctime"
+                        label="课程时间"
+                        :rules="timeRule"
+                        clearable
+                        required
+                        flat
+                        outlined
+                    ></v-text-field>
+                    <v-text-field
+                        v-model="newClass.credit"
+                        label="学分"
+                        :rules="creditRule"
+                        clearable
+                        required
+                        flat
+                        outlined
+                    ></v-text-field>
+                    <v-switch
+                        v-model="newClass.share"
+                        :label="newClass.share?('可共享'):('不可共享')"
+                    ></v-switch>
+                    <v-btn
+                        class="mb-5"
+                        color="success"
+                        @click="confirmNew"
+                        :disabled="!valid"
+                    >确定
+                    </v-btn>
+                    <v-btn
+                        class="mr-5 ml-5 mb-5"
+                        color="error"
+                        @click="cancelNew"
                     >取消
                     </v-btn>
                 </v-form>
@@ -89,10 +160,18 @@
                             <th class="text-left">教师</th>
                             <th class="text-left">课程时间</th>
                             <th class="text-left">学分</th>
-                            <th class="text-left">操作</th>
+                            <th class="text-left">操作</th>                            
                             </tr>
-                        </thead>
+                            
+                        </thead>                    
                         <tbody>
+                            <tr @click="dialogNew=true">
+                                <td></td>
+                                <td></td>
+                                <td><v-icon>mdi-plus</v-icon></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
                             <tr v-for="item in classes" :key="item.cno">
                                 <td>{{ item.cname }}</td>
                                 <td>{{ item.teacher }}</td>
@@ -140,7 +219,7 @@
 </v-app>
 </template>
 <script>
-import {deleteCourse, updateCourse} from "../request/api";
+import {deleteCourse, updateCourse, addCourse} from "../request/api";
 export default {
     data(){
         return {
@@ -153,8 +232,26 @@ export default {
             errMsg: "",
             dialogErr: false,
             dialogEdit: false,
+            dialogNew: false,
             //正被编辑的课程
-            classEditing: {cno: "1", cname: "数据集成", teacher: "刘峰", ctime: "2019-01-01", credit: "1", share: "0", ctype: "b"}
+            classEditing: {cno: "1", cname: "数据集成", teacher: "刘峰", ctime: "2019-01-01", credit: "1", share: "0", ctype: "b"},
+            //新课程
+            newClass:{},
+            valid: false,
+            nameRule: [
+                v => !!v || "请填写课程名称"
+            ],
+            teacherRule: [
+                v => !!v || "请填写教师名称"
+            ],
+            timeRule: [
+                v => !!v || "请填写时间"
+            ],
+            creditRule: [
+                v => !!v || "请填写学分",
+                v => !isNaN(v) || "学分应为数值",
+                v => Number.isInteger(Number(v)) || "学分应为整数"
+            ]
         }
     },
     methods: {
@@ -184,6 +281,9 @@ export default {
             this.dialogErr = true;
         },
         confirmEdit(){
+            //TODO:点击后不能关闭dialog
+            this.dialogEdit = false;
+            this.classEditing = null;
             var c = this.classEditing;
             updateCourse(c).then(res => {
                 if(res.data == true){
@@ -204,11 +304,37 @@ export default {
                 this.Alert("something went wrong.");
                 err;
             });
-            this.dialogEdit = false;
+            
+            
         },
-        cancelEdit() {
-            this.dialogEdit = false;
+        confirmNew(){
+            this.dialogNew = false;
+            this.newClass.type = "A";
+            if(this.newClass.share){
+                this.newClass.share = "1"
+            }else {
+                this.newClass.share = "0"
+            }
+            console.log(this.newClass);
+            addCourse(this.newClass).then(res => {
+                if(res.data == true){
+                    this.Alert("添加成功");
+                    this.newClass = {};
+                }else {
+                    this.Alert("添加失败")
+                    this.newClass = {};
+                }
+            }).catch(err => {
+                err;
+                this.Alert("something went wrong.");
+                this.newClass = {};
+            })
+        },
+        cancelNew(){
+            this.newClass = {};
+            this.dialogNew = false;
         }
+
 
     }
 }
