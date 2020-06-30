@@ -192,6 +192,8 @@ def getChoiceInfo(sno,cno):    #获取选课信息
 
 def shareCourses():     #共享本院系的课程
     courses=getShareCourses()       #是list，每个元素是courseVO对象
+    for c in courses:
+        c.setShare("0")
     #Todo:调用集成服务器
 
     return False

@@ -69,7 +69,7 @@ public class CourseService {
         return courseRepository.getAllCourse();
     }
 
-    public boolean getOtherCourses(String type){    //获取外院系的共享课程，type是外院B或C
+    public boolean getOtherCourses(String type){    //获取外院系的共享课程，type是外院B或C。注意：此处要把外院系课程的share变为0后才能存入本地数据库
         if(type.equals("B")){   //获取外院B的共享课程
             //Todo:调用集成服务器
 
@@ -85,6 +85,9 @@ public class CourseService {
 
     public boolean shareCourses(){  //共享本院系的课程
         List<CourseVO> courses=courseRepository.getSharedCourse();
+        for(CourseVO c:courses){
+            c.setShare("0");
+        }
         //Todo:调用集成服务器
 
         return false;
