@@ -167,7 +167,7 @@
 </template>
 
 <script>
-  import {addUser, addSession} from "../request/api"
+  import {userLogin} from "../request/api"
   export default {
     name: 'Login',
     computed: {
@@ -224,35 +224,21 @@
           this.$refs.form.reset();
       },
       //登录
-      async login() {
+      login() {
         ////console.log(this.$store.state.userId);
         this.loginPressed = true;
-        await addSession(this.userName, this.password).then(res => {
-            this.$store.commit('setUserId', res.data);
-            //TODO:debug
-            //this.$store.commit('setUserId', 233);
-            ////console.log(this.$store.state.userId);
-            this.$router.push('/project');
-        }).catch(err => {
-          this.loginPressed =false;
-          this.Alert(err.response.data.errMsg);
-        });
+        userLogin(this.userName, this.password).then(res => {
+          if(res.data == null){
+            this.Alert("登录失败");
+          }else{
+            this.$store.commit('setUserId', res.data.sno);
+            this.$router.push("/student");
+          }
+        })
 
       },
       async register() {
-        //const res = await addUser(null, this.userName, this.password);
-        ////console.log(res);
-        this.signUpPressed = true;
-        addUser(null, this.userName, this.password).then(res => {
-          console.log(res);
-          this.signUpPressed = false;
-          this.Alert("注册成功");
-        })
-          .catch(err => {
-            //console.log(err.response.data.errMsg);
-            this.signUpPressed = false;
-            this.Alert(err.response.data.errMsg);
-          })
+        
       },
       Alert(msg){
         this.errMsg = msg;

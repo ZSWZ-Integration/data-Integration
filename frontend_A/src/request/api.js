@@ -35,15 +35,20 @@ export const deleteCourse = (cno) => get("/deleteCourse", cno);
  * 更新课程
  * @param {} course 
  */
-export const updateCourse = (course) => get("/updateCourse", course.cno, course.cname, course.ctime, course.teacher, course.credit, course.type, course.share)
+export const updateCourse = (course) => get("/updateCourse", {cno: course.cno, cname: course.cname, ctime: course.ctime, teacher: course.teacher, credit: course.credit, type: course.type, share: course.share})
 
 /**
  * 添加课程
  * @param {*} course 
  */
-export const addCourse = (course) => get("/addCourse", course.cname, course.ctime, course.teacher, course.credit, course.type, course.share)
+export const addCourse = (course) => get("/addCourse", {cname: course.cname, ctime: course.ctime, teacher: course.teacher, credit: course.credit, type: course.type, share: course.share})
 
 /**
  * 将某院课程设置为对A院共享
  */
 export const getOtherCourses = (type) => get("/getOtherCourses", type);
+
+/**
+ * 登录
+ */
+export const UserLogin = (userName, pw) => get("/login", {username: userName, password: pw})
