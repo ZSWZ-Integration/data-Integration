@@ -9,7 +9,7 @@
                   <v-btn color="error" @click="dialogErr=false">确定</v-btn>
                 </v-card-text>
             </v-card>
-        </v-dialog>
+    </v-dialog>
     <v-app-bar
         app
         clipped-left

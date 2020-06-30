@@ -25,7 +25,11 @@ export const GetStudentCourse = (sno) => get("/GetStudentCourses", sno);
  */
 export const dropCourse = (cno, sno) => get("/dropCourse", {cno, sno});
 
-
+/**
+ * 删除某个课程
+ * @param {*} cno 
+ */
+export const deleteCourse = (cno) => get("/deleteCourse", cno);
 
 
 
