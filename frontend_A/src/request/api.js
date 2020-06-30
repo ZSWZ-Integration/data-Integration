@@ -31,7 +31,11 @@ export const dropCourse = (cno, sno) => get("/dropCourse", {cno, sno});
  */
 export const deleteCourse = (cno) => get("/deleteCourse", cno);
 
-
+/**
+ * 更新课程
+ * @param {} course 
+ */
+export const updateCourse = (course) => get("/updateCourse", course.cno, course.cname, course.ctime, course.teacher, course.credit, course.type, course.share)
 
 
 

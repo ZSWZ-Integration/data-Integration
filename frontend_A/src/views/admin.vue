@@ -3,13 +3,69 @@
     <v-dialog
         v-model="dialogErr"
         width="500">
-            <v-card>
-                <v-card-title>{{errMsg}}</v-card-title>
-                <v-card-text>
-                  <v-btn color="error" @click="dialogErr=false">确定</v-btn>
-                </v-card-text>
-            </v-card>
-        </v-dialog>
+        <v-card>
+            <v-card-title>{{errMsg}}</v-card-title>
+            <v-card-text>
+                <v-btn color="error" @click="dialogErr=false">确定</v-btn>
+            </v-card-text>
+        </v-card>
+    </v-dialog>
+    <v-dialog
+        v-model="dialogEdit"
+        width="800"
+    >
+        <v-card>
+            <v-card-title>编辑课程</v-card-title>
+            <v-card-text>
+                <v-form>
+                    <v-text-field
+                        v-model="classEditing.cname"
+                        label="课程名称"
+                        clearable
+                        required
+                        flat
+                        outlined
+                    ></v-text-field>
+                    <v-text-field
+                        v-model="classEditing.teacher"
+                        label="课程教师"
+                        clearable
+                        required
+                        flat
+                        outlined
+                    ></v-text-field>
+                    <v-text-field
+                        v-model="classEditing.ctime"
+                        label="课程时间"
+                        clearable
+                        required
+                        flat
+                        outlined
+                    ></v-text-field>
+                    <v-text-field
+                        v-model="classEditing.credit"
+                        label="学分"
+                        clearable
+                        required
+                        flat
+                        outlined
+                    ></v-text-field>
+                    <v-btn
+                        class="mb-5"
+                        color="success"
+                        @click="confirmEdit"
+                    >确定
+                    </v-btn>
+                    <v-btn
+                        class="mr-5 ml-5 mb-5"
+                        color="error"
+                        @click="cancelEdit"
+                    >取消
+                    </v-btn>
+                </v-form>
+            </v-card-text>
+        </v-card>
+    </v-dialog>
     <v-app-bar
         app
         clipped-left
@@ -43,7 +99,7 @@
                                 <td>{{ item.ctime }}</td>
                                 <td>{{ item.credit }}</td>
                                 <td>
-                                     <div class="text-center">
+                                     <div>
                                         <v-menu offset-y>
                                         <template v-slot:activator="{ on, attrs }">
                                             <v-btn
@@ -51,8 +107,9 @@
                                             dark
                                             v-bind="attrs"
                                             v-on="on"
+                                            
                                             >
-                                            Dropdown
+                                            <v-icon>mdi-wrench</v-icon>
                                             </v-btn>
                                         </template>
 
@@ -83,7 +140,7 @@
 </v-app>
 </template>
 <script>
-import {deleteCourse} from "../request/api";
+import {deleteCourse, updateCourse} from "../request/api";
 export default {
     data(){
         return {
@@ -95,12 +152,18 @@ export default {
             ],
             errMsg: "",
             dialogErr: false,
+            dialogEdit: false,
+            //正被编辑的课程
+            classEditing: {cno: "1", cname: "数据集成", teacher: "刘峰", ctime: "2019-01-01", credit: "1", share: "0", ctype: "b"}
         }
     },
     methods: {
         updateClass(cno){
-            cno;
             //TODO:
+            this.dialogEdit = true;
+            var c = this.classes.filter(item => item.cno == cno)[0];
+            this.classEditing = JSON.parse(JSON.stringify(c));
+            
         },
         deleteClass(cno){
             deleteCourse(cno).then(res => {
@@ -119,7 +182,34 @@ export default {
         Alert(msg){
             this.errMsg = msg;
             this.dialogErr = true;
+        },
+        confirmEdit(){
+            var c = this.classEditing;
+            updateCourse(c).then(res => {
+                if(res.data == true){
+                    this.Alert("更新成功");
+                    //将本地的列表修改
+                    this.classes.forEach(item => {
+                    if(item.cno == c.cno){
+                        item.cname = c.cname;
+                        item.teacher = c.teacher;
+                        item.ctime = c.ctime;
+                        item.credit = c.credit;
+                    }
+            })
+                }else {
+                    this.Alert("更新失败");
+                }
+            }).catch(err => {
+                this.Alert("something went wrong.");
+                err;
+            });
+            this.dialogEdit = false;
+        },
+        cancelEdit() {
+            this.dialogEdit = false;
         }
+
     }
 }
 </script>
