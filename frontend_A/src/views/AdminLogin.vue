@@ -156,7 +156,7 @@
 </template>
 
 <script>
-  import {postAdmin, addAdmin} from "../request/api"
+  import {userLogin} from "../request/api"
   export default {
     name: 'Login',
     computed: {
@@ -210,28 +210,21 @@
           this.$refs.form.reset();
       },
       //登录
-      async login() {
+      login() {
         ////console.log(this.$store.state.userId);
-        await postAdmin(this.userName, this.password).then(res => {
-            this.$store.commit("setAdminName", this.userName);
-            this.$store.commit('setAdminId', res.data);
-            this.$router.push('/admin');
-        }).catch(err => {
-          this.Alert(err.response.data.errMsg);
-        });
+        this.loginPressed = true;
+        userLogin(this.userName, this.password).then(res => {
+          if(res.data == null){
+            this.Alert("登录失败");
+          }else{
+            this.$store.commit('setUserId', res.data.sno);
+            this.$router.push("/admin");
+          }
+        })
 
       },
       async register() {
-        //const res = await addUser(null, this.userName, this.password);
-        ////console.log(res);
-        addAdmin(this.userName, this.password, this.inviteCode).then(res => {
-          console.log(res);
-          this.Alert("注册成功");
-        })
-          .catch(err => {
-            //console.log(err.response.data.errMsg);
-            this.Alert(err.response.data.errMsg);
-          })
+        
       },
       Alert(msg){
         this.errMsg = msg;

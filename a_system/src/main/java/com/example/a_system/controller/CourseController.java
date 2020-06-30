@@ -54,6 +54,9 @@ public class CourseController {
         return Response.ResponseSuccess(courseService.getAllCourse());
     }
 
+    /**
+     * 将某院课程设置为对A院共享
+     */
     @RequestMapping("/getOtherCourses")
     public Response getOtherCourses(@RequestParam(value = "type",required = true) String type){
         return Response.ResponseSuccess(courseService.getOtherCourses(type));
