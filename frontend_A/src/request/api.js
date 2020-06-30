@@ -43,3 +43,7 @@ export const updateCourse = (course) => get("/updateCourse", course.cno, course.
  */
 export const addCourse = (course) => get("/addCourse", course.cname, course.ctime, course.teacher, course.credit, course.type, course.share)
 
+/**
+ * 将某院课程设置为对A院共享
+ */
+export const getOtherCourses = (type) => get("/getOtherCourses", type);

@@ -179,14 +179,14 @@
                                 <td>{{ item.credit }}</td>
                                 <td>
                                      <div>
-                                        <v-menu offset-y>
+                                        <v-menu offset-y :disabled="!item.editable">
                                         <template v-slot:activator="{ on, attrs }">
                                             <v-btn
                                             color="primary"
                                             dark
                                             v-bind="attrs"
                                             v-on="on"
-                                            
+                                            v-if="item.editable"
                                             >
                                             <v-icon>mdi-wrench</v-icon>
                                             </v-btn>
@@ -211,23 +211,29 @@
                         </tbody>
                     </template>
                 </v-simple-table>
+                
             </v-tab-item>
             <v-tab>获取共享课程</v-tab>
-            <v-tab>学生选课情况</v-tab>
+            <v-tab-item>
+                    <v-col cols="6"> <v-btn @click="getShare('A')">获取A院系课程</v-btn></v-col>
+                    <v-col cols="6"> <v-btn @click="getShare('B')">获取B院系课程</v-btn></v-col>
+                
+            </v-tab-item>
+               
          </v-tabs>
      </v-content>
 </v-app>
 </template>
 <script>
-import {deleteCourse, updateCourse, addCourse} from "../request/api";
+import {deleteCourse, updateCourse, addCourse, getOtherCourses, getAllCourses} from "../request/api";
 export default {
     data(){
         return {
             classes: [
-                {cno: "1", cname: "数据集成", teacher: "刘峰", ctime: "2019-01-01", credit: "1", share: "0", ctype: "b"},
-                {cno: "2", cname: "数据集成2", teacher: "刘峰2", ctime: "2019-01-02", credit: "2", share: "1", ctype: "c"},
-                {cno: "3", cname: "数据集成3", teacher: "刘峰3", ctime: "2019-01-03", credit: "3", share: "0", ctype: "a"},
-                {cno: "4", cname: "数据集成4", teacher: "刘峰4", ctime: "2019-01-04", credit: "4", share: "0", ctype: "a"},
+                {cno: "1", cname: "数据集成", teacher: "刘峰", ctime: "2019-01-01", credit: "1", share: "0", ctype: "b", editable: false},
+                {cno: "2", cname: "数据集成2", teacher: "刘峰2", ctime: "2019-01-02", credit: "2", share: "1", ctype: "c", editable: true},
+                {cno: "3", cname: "数据集成3", teacher: "刘峰3", ctime: "2019-01-03", credit: "3", share: "0", ctype: "a", editable: false},
+                {cno: "4", cname: "数据集成4", teacher: "刘峰4", ctime: "2019-01-04", credit: "4", share: "0", ctype: "a", editable: true},
             ],
             errMsg: "",
             dialogErr: false,
@@ -333,9 +339,38 @@ export default {
         cancelNew(){
             this.newClass = {};
             this.dialogNew = false;
+        },
+        getShare(type){
+            getOtherCourses(type).then(res => {
+                if(res.data == true){
+                    this.Alert("成功");
+                    this.getClasses();
+                }else {
+                    this.Alert("失败")
+                }
+            }).catch(err => {
+                err;
+                this.Alert("Something went wrong.");
+            })
+        },
+        getClasses(){
+            getAllCourses().then(res => {
+                this.classes = res.data;
+                this.classes.foreach(course => {
+                if(course.cno.substring(0, 1) != "A"){
+                    course.editable = true;
+                }else {
+                    course.editable = false;
+                }
+            })
+            }).catch(err => {
+                err;
+                this.Alert("something went wronge.");
+            })
         }
-
-
+    },
+    mounted(){
+        this.getClasses();
     }
 }
 </script>
