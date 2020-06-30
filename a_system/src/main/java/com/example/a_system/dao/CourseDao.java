@@ -75,7 +75,7 @@ public class CourseDao implements CourseRepository {
     public List<Course> getStudentCourse(String Sno) {
         //String Sno=jdbcTemplate.queryForObject("select Sno from student where Sname=?",String.class,Sname);
         try {
-            return jdbcTemplate.query("select * from course where course.Cno in (select Cno from takeCourse where Sno=?);", new CourseMapper(), Sno);
+            return jdbcTemplate.query("select * from course where course.Cno in (select Cno from take_course where Sno=?);", new CourseMapper(), Sno);
         }catch(Exception e){
             e.printStackTrace();
             return null;
@@ -99,7 +99,7 @@ public class CourseDao implements CourseRepository {
 
     @Override
     public Choice getChoiceInfo(String sno, String cno) {
-        return jdbcTemplate.queryForObject("select * from takecourse where Sno=? and Cno=?",new ChoiceMapper(),sno,cno);
+        return jdbcTemplate.queryForObject("select * from take_course where Sno=? and Cno=?",new ChoiceMapper(),sno,cno);
     }
 
 
