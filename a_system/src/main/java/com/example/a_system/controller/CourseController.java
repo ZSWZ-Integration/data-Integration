@@ -14,8 +14,8 @@ public class CourseController {
     CourseService courseService;
 
     @RequestMapping("/addCourse")
-    public Response addCourse(@RequestParam(value = "cno",required = true) String cno,@RequestParam(value = "cname",required = true) String cname,@RequestParam(value = "place",required = true) String place,@RequestParam(value = "teacher",required = true) String teacher,@RequestParam(value = "credit",required = true) String credit,@RequestParam(value = "type",required = true) String type,@RequestParam(value = "share",required = true) String share){
-        return Response.ResponseSuccess(courseService.addCourse(cno,cname,place,teacher,credit,type,share));
+    public Response addCourse(@RequestParam(value = "cno",required = true) String cno,@RequestParam(value = "cname",required = true) String cname,@RequestParam(value = "ctime",required = true) String ctime,@RequestParam(value = "teacher",required = true) String teacher,@RequestParam(value = "credit",required = true) String credit,@RequestParam(value = "type",required = true) String type,@RequestParam(value = "share",required = true) String share){
+        return Response.ResponseSuccess(courseService.addCourse(cno,cname,ctime,teacher,credit,type,share));
     }
 
     @RequestMapping("/deleteCourse")
@@ -24,8 +24,8 @@ public class CourseController {
     }
 
     @RequestMapping("/updateCourse")
-    public Response updateCourse(@RequestParam(value = "cno",required = true) String cno,@RequestParam(value = "cname",required = true) String cname,@RequestParam(value = "place",required = true) String place,@RequestParam(value = "teacher",required = true) String teacher,@RequestParam(value = "credit",required = true) String credit,@RequestParam(value = "type",required = true) String type,@RequestParam(value = "share",required = true) String share){
-        return Response.ResponseSuccess(courseService.updateCourse(cno,cname,place,teacher,credit,type,share));
+    public Response updateCourse(@RequestParam(value = "cno",required = true) String cno,@RequestParam(value = "cname",required = true) String cname,@RequestParam(value = "ctime",required = true) String ctime,@RequestParam(value = "teacher",required = true) String teacher,@RequestParam(value = "credit",required = true) String credit,@RequestParam(value = "type",required = true) String type,@RequestParam(value = "share",required = true) String share){
+        return Response.ResponseSuccess(courseService.updateCourse(cno,cname,ctime,teacher,credit,type,share));
     }
 
     @RequestMapping("/chooseCourse")

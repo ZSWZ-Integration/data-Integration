@@ -21,16 +21,16 @@ public class CourseService {
     @Autowired
     UserRepository userRepository;
 
-    public boolean addCourse(String Cno,String Cname,String place,String teacher,String credit,String type,String share){
-        return courseRepository.addCourse(Cno,Cname,place,teacher,credit,type,share);
+    public boolean addCourse(String Cno,String Cname,String ctime,String teacher,String credit,String type,String share){
+        return courseRepository.addCourse(Cno,Cname,ctime,teacher,credit,type,share);
     }
 
     public boolean deleteCourse(String Cno){
         return courseRepository.deleteCourse(Cno);
     }
 
-    public boolean updateCourse(String Cno,String Cname,String place,String teacher,String credit,String type,String share){
-        return courseRepository.updateCourse(Cno,Cname,place,teacher,credit,type,share);
+    public boolean updateCourse(String Cno,String Cname,String ctime,String teacher,String credit,String type,String share){
+        return courseRepository.updateCourse(Cno,Cname,ctime,teacher,credit,type,share);
     }
 
     public boolean chooseCourse(String Sno,String Cno){
