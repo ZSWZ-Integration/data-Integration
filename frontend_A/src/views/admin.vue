@@ -142,7 +142,7 @@
         clipped-left
         color="amber"
     >
-            <span class="title ml-3 mr-5">用户名</span>
+            <span class="title ml-3 mr-5">管理员</span>
             <v-spacer />
             <v-spacer />
             <v-spacer />
