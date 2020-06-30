@@ -21,6 +21,7 @@ public interface CourseRepository {
 
     public abstract List<Course> getAllCourse();
     public abstract List<CourseVO> getSharedCourse();
+    public abstract int getACoursesNum();
 
     public abstract Choice getChoiceInfo(String sno, String cno);
 }

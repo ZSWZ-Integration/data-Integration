@@ -15,9 +15,9 @@ public class CourseDao implements CourseRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
     @Override
-    public boolean addCourse(String Cno,String Cname,String place,String teacher,String credit,String type,String isShared) {
+    public boolean addCourse(String Cno,String Cname,String ctime,String teacher,String credit,String type,String isShared) {
         try {
-            jdbcTemplate.update("insert into `course` (Cno,Cname,place,teacher,Ctime,credit,Ctype,share) values (?,?,?,?,?,?,?,?)", Cno, Cname, place, teacher, credit, type, isShared);
+            jdbcTemplate.update("insert into `course` (Cno,Cname,ctime,teacher,Ctime,credit,Ctype,share) values (?,?,?,?,?,?,?,?)", Cno, Cname, ctime, teacher, credit, type, isShared);
             return true;
         }catch (Exception e) {
             e.printStackTrace();
@@ -37,9 +37,9 @@ public class CourseDao implements CourseRepository {
     }
 
     @Override
-    public boolean updateCourse(String Cno,String Cname,String place,String teacher,String credit,String type,String isShared) {
+    public boolean updateCourse(String Cno,String Cname,String ctime,String teacher,String credit,String type,String isShared) {
         try{
-            jdbcTemplate.update("update `course` set Cname=?,place=?,teacher=?,credit=?,Ctype=?,share=? where Cno=?",Cname,place,teacher,credit,type,isShared,Cno);
+            jdbcTemplate.update("update `course` set Cname=?,ctime=?,teacher=?,credit=?,Ctype=?,share=? where Cno=?",Cname,ctime,teacher,credit,type,isShared,Cno);
             return true;
         }catch (Exception e) {
             e.printStackTrace();
@@ -90,6 +90,11 @@ public class CourseDao implements CourseRepository {
     @Override
     public List<CourseVO> getSharedCourse(){  //外院系的共享课程本院的share字段为0
         return jdbcTemplate.query("select * from course where share=1",new CourseVOMapper());
+    }
+
+    @Override
+    public int getACoursesNum() {
+        return jdbcTemplate.queryForObject("select count(*) from course where type='A'",Integer.class);
     }
 
     @Override

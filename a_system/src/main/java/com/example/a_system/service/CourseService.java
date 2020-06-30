@@ -7,6 +7,8 @@ import com.example.a_system.po.Course.Course;
 import com.example.a_system.vo.ChoiceVO;
 import com.example.a_system.vo.CourseVO;
 import com.example.a_system.vo.StudentVO;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,16 +23,22 @@ public class CourseService {
     @Autowired
     UserRepository userRepository;
 
-    public boolean addCourse(String Cno,String Cname,String place,String teacher,String credit,String type,String share){
-        return courseRepository.addCourse(Cno,Cname,place,teacher,credit,type,share);
+    @Autowired
+    XmlService xmlService;
+
+
+    public boolean addCourse(String Cname,String ctime,String teacher,String credit,String type,String share) {
+        int num=courseRepository.getACoursesNum();
+        String Cno="A"+(num+1);
+        return courseRepository.addCourse(Cno, Cname, ctime, teacher, credit, type, share);
     }
 
     public boolean deleteCourse(String Cno){
         return courseRepository.deleteCourse(Cno);
     }
 
-    public boolean updateCourse(String Cno,String Cname,String place,String teacher,String credit,String type,String share){
-        return courseRepository.updateCourse(Cno,Cname,place,teacher,credit,type,share);
+    public boolean updateCourse(String Cno,String Cname,String ctime,String teacher,String credit,String type,String share){
+        return courseRepository.updateCourse(Cno,Cname,ctime,teacher,credit,type,share);
     }
 
     public boolean chooseCourse(String Sno,String Cno){
@@ -40,14 +48,15 @@ public class CourseService {
             StudentVO student=userRepository.getStudentInfo(Sno); //StudentVO
             student.setPassword("noPassword");     //修改掉password,不让学生登录外院系的教务系统
             Choice choicePO=courseRepository.getChoiceInfo(Sno,Cno);
-            ChoiceVO choiceVO =new ChoiceVO(choicePO.getCno(),student,choicePO.getGrade());  //ChoiceVO
+            ChoiceVO choiceVO = new ChoiceVO(choicePO.getCno(),student,choicePO.getGrade());  //ChoiceVO
             //Todo:调用集成服务器
+
 
             return false;
         }
     }
 
-    public boolean dropCourse(String Sno,String Cno){
+    public boolean dropCourse(String Sno,String Cno) throws JsonProcessingException {
         if(Cno.substring(0,1).equals("A"))          //退本院系的课
             return courseRepository.dropCourse(Sno,Cno);
         else{               //退外院系的课
@@ -72,6 +81,7 @@ public class CourseService {
     public boolean getOtherCourses(String type){    //获取外院系的共享课程，type是外院B或C。注意：此处要把外院系课程的share变为0后才能存入本地数据库
         if(type.equals("B")){   //获取外院B的共享课程
             //Todo:调用集成服务器
+
 
             return false;
         }

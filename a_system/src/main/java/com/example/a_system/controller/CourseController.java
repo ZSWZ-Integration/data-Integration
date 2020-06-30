@@ -2,6 +2,7 @@ package com.example.a_system.controller;
 
 import com.example.a_system.service.CourseService;
 import com.example.a_system.vo.Response;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,8 +15,8 @@ public class CourseController {
     CourseService courseService;
 
     @RequestMapping("/addCourse")
-    public Response addCourse(@RequestParam(value = "cno",required = true) String cno,@RequestParam(value = "cname",required = true) String cname,@RequestParam(value = "place",required = true) String place,@RequestParam(value = "teacher",required = true) String teacher,@RequestParam(value = "credit",required = true) String credit,@RequestParam(value = "type",required = true) String type,@RequestParam(value = "share",required = true) String share){
-        return Response.ResponseSuccess(courseService.addCourse(cno,cname,place,teacher,credit,type,share));
+    public Response addCourse(@RequestParam(value = "cname",required = true) String cname,@RequestParam(value = "ctime",required = true) String ctime,@RequestParam(value = "teacher",required = true) String teacher,@RequestParam(value = "credit",required = true) String credit,@RequestParam(value = "type",required = true) String type,@RequestParam(value = "share",required = true) String share){
+        return Response.ResponseSuccess(courseService.addCourse(cname,ctime,teacher,credit,type,share));
     }
 
     @RequestMapping("/deleteCourse")
@@ -24,8 +25,8 @@ public class CourseController {
     }
 
     @RequestMapping("/updateCourse")
-    public Response updateCourse(@RequestParam(value = "cno",required = true) String cno,@RequestParam(value = "cname",required = true) String cname,@RequestParam(value = "place",required = true) String place,@RequestParam(value = "teacher",required = true) String teacher,@RequestParam(value = "credit",required = true) String credit,@RequestParam(value = "type",required = true) String type,@RequestParam(value = "share",required = true) String share){
-        return Response.ResponseSuccess(courseService.updateCourse(cno,cname,place,teacher,credit,type,share));
+    public Response updateCourse(@RequestParam(value = "cno",required = true) String cno,@RequestParam(value = "cname",required = true) String cname,@RequestParam(value = "ctime",required = true) String ctime,@RequestParam(value = "teacher",required = true) String teacher,@RequestParam(value = "credit",required = true) String credit,@RequestParam(value = "type",required = true) String type,@RequestParam(value = "share",required = true) String share){
+        return Response.ResponseSuccess(courseService.updateCourse(cno,cname,ctime,teacher,credit,type,share));
     }
 
     @RequestMapping("/chooseCourse")
@@ -35,7 +36,12 @@ public class CourseController {
 
     @RequestMapping("/dropCourse")
     public Response dropCourse(@RequestParam(value = "cno",required = true) String cno,@RequestParam(value = "sno",required = true) String sno){
-        return Response.ResponseSuccess(courseService.dropCourse(sno,cno));
+        try {
+            return Response.ResponseSuccess(courseService.dropCourse(sno,cno));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            return Response.ResponseFail("dropCourse Fail...");
+        }
     }
 
     @RequestMapping("/GetStudentCourses")

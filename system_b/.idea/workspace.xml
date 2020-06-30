@@ -2,9 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6be8cfc-2c64-4e32-8676-1ce9116dc891" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__commons_codec_commons_codec_1_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/XmlService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/controller/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/CourseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/Repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/Repository/CourseRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/ChoiceVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/ChoiceVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/CourseVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/CourseVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../center_system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../center_system/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../center_system/src/main/java/com/example/center_system/controller/XmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../center_system/src/main/java/com/example/center_system/controller/XmlController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../center_system/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../center_system/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend_A/src/views/student.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend_A/src/views/student.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend_A/src/views/studentDropClass.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend_A/src/views/studentDropClass.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py" beforeDir="false" afterPath="$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/educationalSystem_B/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/educationalSystem_B/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/educationalSystem_B/vo/studentVO.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="38" column="20" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="38" selection-end-column="20" />
+            <state relative-caret-position="722">
+              <caret line="38" column="20" selection-start-line="10" selection-start-column="4" selection-end-line="38" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -26,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="195" column="23" lean-forward="true" selection-start-line="195" selection-start-column="23" selection-end-line="195" selection-end-column="23" />
+            <state relative-caret-position="307">
+              <caret line="60" column="37" lean-forward="true" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -50,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/educationalSystem_B/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="77" column="22" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="22" />
+            <state relative-caret-position="220">
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -62,11 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/user/userService.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="57" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="551">
+              <caret line="30" column="57" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -74,7 +87,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/educationalSystem_B/vo/choiceVO.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="323">
               <caret line="17" column="21" selection-start-line="7" selection-start-column="4" selection-end-line="17" selection-end-column="21" />
             </state>
           </provider>
@@ -84,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/educationalSystem_B/vo/courseVO.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="779">
-              <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+              <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -144,8 +157,8 @@
         <option value="$PROJECT_DIR$/educationalSystem_B/vo/choiceVO.py" />
         <option value="$PROJECT_DIR$/educationalSystem_B/service/user/userService.py" />
         <option value="$PROJECT_DIR$/educationalSystem_B/vo/courseVO.py" />
-        <option value="$PROJECT_DIR$/educationalSystem_B/views.py" />
         <option value="$PROJECT_DIR$/educationalSystem_B/urls.py" />
+        <option value="$PROJECT_DIR$/educationalSystem_B/views.py" />
         <option value="$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py" />
       </list>
     </option>
@@ -162,7 +175,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -215,6 +227,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,6 +357,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/educationalSystem_B/vo/studentVO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="20" selection-start-line="10" selection-start-column="4" selection-end-line="38" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/user/userService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="30" column="57" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/educationalSystem_B/vo/choiceVO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="21" selection-start-line="7" selection-start-column="4" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/educationalSystem_B/vo/courseVO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/educationalSystem_B/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -364,41 +405,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/user/userService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/educationalSystem_B/vo/choiceVO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="17" column="21" selection-start-line="7" selection-start-column="4" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/educationalSystem_B/vo/studentVO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="38" column="20" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="38" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/educationalSystem_B/vo/courseVO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/educationalSystem_B/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="77" column="22" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="22" />
+        <state relative-caret-position="220">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -417,8 +427,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="195" column="23" lean-forward="true" selection-start-line="195" selection-start-column="23" selection-end-line="195" selection-end-column="23" />
+        <state relative-caret-position="307">
+          <caret line="60" column="37" lean-forward="true" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

@@ -41,4 +41,5 @@ public class ChoiceVO {
     public void setGrade(String grade) {
         this.grade = grade;
     }
+
 }
