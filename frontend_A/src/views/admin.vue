@@ -146,7 +146,7 @@
             <v-spacer />
             <v-spacer />
             <v-spacer />
-            <v-btn>退出登录</v-btn>
+            <v-btn @click="logout">退出登录</v-btn>
     </v-app-bar>
      <v-content>
          <v-tabs>
@@ -367,6 +367,10 @@ export default {
                 err;
                 this.Alert("something went wronge.");
             })
+        },
+        logout(){
+            this.$store.commit("setUserId", 0);
+            this.$router.push('/adminLogin');
         }
     },
     mounted(){

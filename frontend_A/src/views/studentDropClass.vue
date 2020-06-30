@@ -20,7 +20,7 @@
             <v-spacer />
             <v-spacer />
             <v-btn @click="toChoose">选课</v-btn>
-            <v-btn >退出登录</v-btn>
+            <v-btn @click="logout">退出登录</v-btn>
     </v-app-bar>
      <v-content>
         <v-simple-table>
@@ -89,6 +89,10 @@ export default {
         },
         toChoose(){
             this.$router.push("/student");
+        },
+        logout(){
+            this.$store.commit("setUserId", 0);
+            this.$router.push('/login');
         }
 
     }, mounted(){

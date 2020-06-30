@@ -20,7 +20,7 @@
             <v-spacer />
             <v-spacer />
             <v-btn @click="toDrop">课程退选</v-btn>
-            <v-btn >退出登录</v-btn>
+            <v-btn @click="logout">退出登录</v-btn>
     </v-app-bar>
      <v-content>
         <v-simple-table>
@@ -97,6 +97,10 @@ export default {
         },
         toDrop(){
             this.$router.push("/studentDropClass");
+        },
+        logout(){
+            this.$store.commit("setUserId", 0);
+            this.$router.push('/login');
         }
 
     }, mounted(){
