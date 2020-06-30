@@ -1,10 +1,8 @@
 package com.example.a_system.vo;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
-@JacksonXmlRootElement(localName = "A系统课程共享")
-public class CourseVO {
+public class Course {
 
     private String cno;
     private String cname;
@@ -13,6 +11,7 @@ public class CourseVO {
     private String credit;
     private String share;
     private String ctype;
+
 
     @JacksonXmlProperty(localName = "课程编号A")
     public String getCno() {
@@ -32,7 +31,7 @@ public class CourseVO {
         this.cname = cname;
     }
 
-    @JacksonXmlProperty(localName = "教师姓名A")
+    @JacksonXmlProperty(localName = "授课教师A")
     public String getTeacher() {
         return teacher;
     }
@@ -78,7 +77,7 @@ public class CourseVO {
     }
 
 
-    public CourseVO(String cno, String cname, String teacher, String ctime, String credit, String share, String ctype) {
+    public Course(String cno, String cname, String teacher, String ctime, String credit, String share, String ctype) {
         this.cno = cno;
         this.cname = cname;
         this.teacher = teacher;

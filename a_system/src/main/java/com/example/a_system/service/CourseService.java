@@ -3,16 +3,13 @@ package com.example.a_system.service;
 import com.example.a_system.dao.Repository.CourseRepository;
 import com.example.a_system.dao.Repository.UserRepository;
 import com.example.a_system.po.Course.Choice;
-import com.example.a_system.po.Course.Course;
 import com.example.a_system.vo.ChoiceVO;
-import com.example.a_system.vo.CourseVO;
-import com.example.a_system.vo.StudentVO;
+import com.example.a_system.vo.Course;
+import com.example.a_system.vo.Student;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -46,7 +43,7 @@ public class CourseService {
             return courseRepository.chooseCourse(Sno,Cno);
         else{               //选择外院系的课
             try {
-                StudentVO student = userRepository.getStudentInfo(Sno); //StudentVO
+                Student student = userRepository.getStudentInfo(Sno); //Student
                 student.setPassword("noPassword");     //修改掉password,不让学生登录外院系的教务系统
                 Choice choicePO = courseRepository.getChoiceInfo(Sno, Cno);
                 ChoiceVO choiceVO = new ChoiceVO(choicePO.getCno(), student, choicePO.getGrade());  //ChoiceVO
@@ -75,7 +72,7 @@ public class CourseService {
             return courseRepository.dropCourse(Sno,Cno);
         else{               //退外院系的课
             try {
-                StudentVO student=userRepository.getStudentInfo(Sno); //StudentVO
+                Student student=userRepository.getStudentInfo(Sno); //Student
                 Choice choicePO=courseRepository.getChoiceInfo(Sno,Cno);
                 ChoiceVO choice =new ChoiceVO(choicePO.getCno(),student,choicePO.getGrade());  //ChoiceVO
                 //给集成服务器发送xml
@@ -99,11 +96,11 @@ public class CourseService {
 
     }
 
-    public List<Course> getStudentCourse(String Sno){
+    public List<com.example.a_system.po.Course.Course> getStudentCourse(String Sno){
         return courseRepository.getStudentCourse(Sno);
     }
 
-    public List<Course> getAllCourse(){
+    public List<com.example.a_system.po.Course.Course> getAllCourse(){
         return courseRepository.getAllCourse();
     }
 
@@ -135,8 +132,8 @@ public class CourseService {
 
     public String shareCourses(){  //共享本院系的课程
         try {
-            List<CourseVO> courses = courseRepository.getSharedCourse();
-            for (CourseVO c : courses) {
+            List<Course> courses = courseRepository.getSharedCourse();
+            for (Course c : courses) {
                 c.setShare("0");
             }
             //Todo:封装成大的xml文件，发送给集成服务器
