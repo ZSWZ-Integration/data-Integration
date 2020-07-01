@@ -3,6 +3,7 @@ import axios from 'axios'
 //axios.defaults.baseURL = "http://116.62.123.74:8080";
 //axios.defaults.baseURL = "http://101.201.150.49:8080";
 axios.defaults.baseURL = "http://localhost:8081";
+axios.defaults.withCredentials = true
 
 /**
   * get方法，对应get请求
