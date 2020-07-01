@@ -49,7 +49,7 @@ public class StatisticStudent {
         this.sex = sex;
     }
 
-    @JacksonXmlProperty(localName = "")
+    @JacksonXmlProperty(localName = "课程编号A")
     public String getCno() {
         return cno;
     }
@@ -58,7 +58,7 @@ public class StatisticStudent {
         this.cno = cno;
     }
 
-    @JacksonXmlProperty(localName = "")
+    @JacksonXmlProperty(localName = "课程名A")
     public String getCname() {
         return cname;
     }
@@ -67,7 +67,7 @@ public class StatisticStudent {
         this.cname = cname;
     }
 
-    @JacksonXmlProperty(localName = "")
+    @JacksonXmlProperty(localName = "课程成绩A")
     public String getGrade() {
         return grade;
     }
