@@ -3,7 +3,7 @@ package com.example.a_system.dao;
 import com.example.a_system.dao.Repository.CourseRepository;
 import com.example.a_system.po.Course.*;
 
-import com.example.a_system.vo.CourseVO;
+import com.example.a_system.vo.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -17,7 +17,7 @@ public class CourseDao implements CourseRepository {
     @Override
     public boolean addCourse(String Cno,String Cname,String ctime,String teacher,String credit,String type,String isShared) {
         try {
-            jdbcTemplate.update("insert into `course` (Cno,Cname,ctime,teacher,Ctime,credit,Ctype,share) values (?,?,?,?,?,?,?,?)", Cno, Cname, ctime, teacher, credit, type, isShared);
+            jdbcTemplate.update("insert into `course` (Cno,Cname,teacher,Ctime,credit,Ctype,share) values (?,?,?,?,?,?,?)", Cno, Cname,  teacher,ctime, credit, type, isShared);
             return true;
         }catch (Exception e) {
             e.printStackTrace();
@@ -72,7 +72,7 @@ public class CourseDao implements CourseRepository {
     }
 
     @Override
-    public List<Course> getStudentCourse(String Sno) {
+    public List<com.example.a_system.po.Course.CoursePO> getStudentCourse(String Sno) {
         //String Sno=jdbcTemplate.queryForObject("select Sno from student where Sname=?",String.class,Sname);
         try {
             return jdbcTemplate.query("select * from course where course.Cno in (select Cno from take_course where Sno=?);", new CourseMapper(), Sno);
@@ -83,18 +83,18 @@ public class CourseDao implements CourseRepository {
     }
 
     @Override
-    public List<Course> getAllCourse() {
+    public List<com.example.a_system.po.Course.CoursePO> getAllCourse() {
         return jdbcTemplate.query("select * from course",new CourseMapper());
     }
 
     @Override
-    public List<CourseVO> getSharedCourse(){  //外院系的共享课程本院的share字段为0
+    public List<Course> getSharedCourse(){  //外院系的共享课程本院的share字段为0
         return jdbcTemplate.query("select * from course where share=1",new CourseVOMapper());
     }
 
     @Override
     public int getACoursesNum() {
-        return jdbcTemplate.queryForObject("select count(*) from course where type='A'",Integer.class);
+        return jdbcTemplate.queryForObject("select count(*) from course where Ctype='A'",Integer.class);
     }
 
     @Override

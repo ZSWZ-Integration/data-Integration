@@ -2,10 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6be8cfc-2c64-4e32-8676-1ce9116dc891" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/controller/XmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/controller/XmlController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/CourseListVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/StatisticCourseListVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/controller/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/CourseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/Repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/Repository/CourseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/Repository/StatisticRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/Repository/StatisticRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/Repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/StatisticDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/StatisticDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/po/Course/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/po/Course/CoursePO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/po/Course/CourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/po/Course/CourseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/po/Course/CourseVOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/po/Course/CourseVOMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/po/User/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/po/User/StudentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/po/statistic/StatisticCourseVOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/po/statistic/StatisticCourseVOMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/po/statistic/StatisticStudentVOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/po/statistic/StatisticStudentVOMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/CourseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/StatisticService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/StatisticService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/XmlService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/XmlService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/ChoiceVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/ChoiceVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/CourseVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/StatisticCourseVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/StatisticCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/StatisticStudentVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/StatisticStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/StudentVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/vo/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_system/src/test/java/com/example/a_system/dao/CourseDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/test/java/com/example/a_system/dao/CourseDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend_A/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend_A/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend_A/src/request/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend_A/src/request/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend_A/src/request/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend_A/src/request/http.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py" beforeDir="false" afterPath="$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="2033">
               <caret line="122" column="25" lean-forward="true" selection-start-line="122" selection-start-column="25" selection-end-line="122" selection-end-column="25" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
@@ -36,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/xml/xmlService.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-338">
@@ -51,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/educationalSystem_B/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="-38">
               <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -60,7 +87,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/user/userService.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="551">
@@ -70,19 +97,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/educationalSystem_B/vo/choiceVO.py">
+        <entry file="file://$PROJECT_DIR$/educationalSystem_B/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+            <state relative-caret-position="19">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/educationalSystem_B/vo/courseVO.py">
+        <entry file="file://$PROJECT_DIR$/educationalSystem_B/sql/b.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+            <state relative-caret-position="456">
+              <caret line="87" column="72" selection-start-line="87" selection-start-column="72" selection-end-line="87" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -104,8 +134,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system_b/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="228">
+              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="30" />
               <folding>
                 <element signature="e#632#664#0" expanded="true" />
               </folding>
@@ -183,7 +213,38 @@
               <item name="system_b" type="b2602c69:ProjectViewProjectNode" />
               <item name="system_b" type="462c0819:PsiDirectoryNode" />
               <item name="educationalSystem_B" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system_b" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system_b" type="462c0819:PsiDirectoryNode" />
+              <item name="educationalSystem_B" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system_b" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system_b" type="462c0819:PsiDirectoryNode" />
+              <item name="educationalSystem_B" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system_b" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system_b" type="462c0819:PsiDirectoryNode" />
+              <item name="educationalSystem_B" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system_b" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system_b" type="462c0819:PsiDirectoryNode" />
+              <item name="educationalSystem_B" type="462c0819:PsiDirectoryNode" />
               <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system_b" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system_b" type="462c0819:PsiDirectoryNode" />
+              <item name="system_b" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="system_b" type="b2602c69:ProjectViewProjectNode" />
@@ -260,9 +321,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24622716" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24622716" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -273,7 +333,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4988086" visible="true" weight="0.2769486" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4988086" visible="true" weight="0.2769486" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50119144" side_tool="true" weight="0.3283582" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -288,13 +348,6 @@
           <folding>
             <element signature="e#84#93#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/educationalSystem_B/sql/b.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="87" column="72" selection-start-line="87" selection-start-column="72" selection-end-line="87" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -322,33 +375,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/educationalSystem_B/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/educationalSystem_B/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/user/userService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="30" column="57" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/educationalSystem_B/vo/choiceVO.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -373,30 +399,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system_b/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#632#664#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/educationalSystem_B/vo/studentVO.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="122" column="25" lean-forward="true" selection-start-line="122" selection-start-column="25" selection-end-line="122" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -407,6 +413,60 @@
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/educationalSystem_B/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system_b/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#632#664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/educationalSystem_B/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/educationalSystem_B/sql/b.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="87" column="72" selection-start-line="87" selection-start-column="72" selection-end-line="87" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2033">
+          <caret line="122" column="25" lean-forward="true" selection-start-line="122" selection-start-column="25" selection-end-line="122" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/user/userService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="30" column="57" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="57" />
         </state>
       </provider>
     </entry>

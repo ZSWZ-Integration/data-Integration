@@ -7,9 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @Mapper
-public class CourseMapper implements RowMapper<Course> {
+public class CourseMapper implements RowMapper<CoursePO> {
     @Override
-    public Course mapRow(ResultSet resultSet, int i)throws SQLException {
+    public CoursePO mapRow(ResultSet resultSet, int i)throws SQLException {
         String Cno=resultSet.getString("Cno");
         String Cname=resultSet.getString("Cname");
         String teacher=resultSet.getString("teacher");
@@ -17,6 +17,6 @@ public class CourseMapper implements RowMapper<Course> {
         String credit=resultSet.getString("credit");
         String share=resultSet.getString("share");
         String Ctype=resultSet.getString("Ctype");
-        return new Course(Cno,Cname,teacher,Ctime,credit,share,Ctype);
+        return new CoursePO(Cno,Cname,teacher,Ctime,credit,share,Ctype);
     }
 }

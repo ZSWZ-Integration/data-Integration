@@ -1,7 +1,7 @@
 package com.example.a_system.dao;
 
 import com.example.a_system.dao.Repository.CourseRepository;
-import com.example.a_system.po.Course.Course;
+import com.example.a_system.po.Course.CoursePO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ public class CourseDaoTest {
 
     @Test
     public void getStudentCourseTest(){
-        List<Course> courses=courseRepository.getStudentCourse("01");
+        List<CoursePO> courses=courseRepository.getStudentCourse("01");
         System.out.println(courses);
         System.out.println(courses.size());
     }

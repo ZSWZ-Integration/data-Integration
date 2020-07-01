@@ -1,6 +1,9 @@
 package com.example.a_system.vo;
 
-public class StatisticStudentVO {
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
+public class StatisticStudent {
+
     private String sno;
     private String sname;
     private String sex;
@@ -8,15 +11,18 @@ public class StatisticStudentVO {
     private String cname;
     private String grade;
 
-    public StatisticStudentVO(String sno, String sname, String sex, String cno, String cname, String grade) {
+    public StatisticStudent(String sno, String sname, String sex, String cno, String cname, String grade) {
+
         this.sno = sno;
         this.sname = sname;
         this.sex = sex;
         this.cno = cno;
         this.cname = cname;
         this.grade = grade;
+
     }
 
+    @JacksonXmlProperty(localName = "学生编号A")
     public String getSno() {
         return sno;
     }
@@ -25,6 +31,7 @@ public class StatisticStudentVO {
         this.sno = sno;
     }
 
+    @JacksonXmlProperty(localName = "学生姓名A")
     public String getSname() {
         return sname;
     }
@@ -33,6 +40,7 @@ public class StatisticStudentVO {
         this.sname = sname;
     }
 
+    @JacksonXmlProperty(localName = "学生性别A")
     public String getSex() {
         return sex;
     }
@@ -41,6 +49,7 @@ public class StatisticStudentVO {
         this.sex = sex;
     }
 
+    @JacksonXmlProperty(localName = "")
     public String getCno() {
         return cno;
     }
@@ -49,6 +58,7 @@ public class StatisticStudentVO {
         this.cno = cno;
     }
 
+    @JacksonXmlProperty(localName = "")
     public String getCname() {
         return cname;
     }
@@ -57,6 +67,7 @@ public class StatisticStudentVO {
         this.cname = cname;
     }
 
+    @JacksonXmlProperty(localName = "")
     public String getGrade() {
         return grade;
     }

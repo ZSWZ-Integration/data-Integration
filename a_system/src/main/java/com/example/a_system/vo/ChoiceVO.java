@@ -6,13 +6,17 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 @JacksonXmlRootElement(localName = "A系统学生选课信息")
 public class ChoiceVO {
     private String cno;
-    private StudentVO student;
+    private Student student;
     private String grade;
 
-    public ChoiceVO(String cno, StudentVO student, String grade) {
+    public ChoiceVO(String cno, Student student, String grade) {
         this.cno = cno;
         this.student = student;
         this.grade = grade;
+    }
+
+    public ChoiceVO() {
+        super();
     }
 
     @JacksonXmlProperty(localName = "课程编号A")
@@ -25,11 +29,11 @@ public class ChoiceVO {
     }
 
     @JacksonXmlProperty(localName = "学生信息A")
-    public StudentVO getStudent() {
+    public Student getStudent() {
         return student;
     }
 
-    public void setStudent(StudentVO student) {
+    public void setStudent(Student student) {
         this.student = student;
     }
 
