@@ -1,11 +1,14 @@
 package com.example.center_system.Service;
 
+import javax.xml.transform.TransformerException;
+import java.io.IOException;
+
 public interface ShareService {
 
-    String AGetSharedCourse();
+    String AGetSharedCourse() throws IOException, TransformerException;
 
-    String BGetSharedCourse();
+    String BGetSharedCourse() throws IOException, TransformerException;
 
-    String CGetSharedCourse();
+    String CGetSharedCourse() throws IOException, TransformerException;
 
 }
