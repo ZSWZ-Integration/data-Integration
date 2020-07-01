@@ -3,7 +3,7 @@ import { get} from './http'
 /**
  * 获取全部课程，其中可能包含非共享课程
  */
-export const getAllCourses = () => get("/getAllCourses", {type: "A"});
+export const getAllCourses = () => get("/getAllCourses");
 
 /**
  * 选课

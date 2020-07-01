@@ -19,29 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01246591-f4c4-4acc-b175-39c2b524be3a" name="Default Changelist" comment="完善XMLService及相关controller接口示例">
-      <change afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/CourseListVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/StatisticCourseListVO.java" afterDir="false" />
+    <list default="true" id="01246591-f4c4-4acc-b175-39c2b524be3a" name="Default Changelist" comment="完善XML转Bean功能，重命名了几个bean">
+      <change afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/StatisticStudentListVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/dao/CourseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/dao/Repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/dao/Repository/CourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/dao/Repository/StatisticRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/dao/Repository/StatisticRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/dao/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/dao/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/dao/StatisticDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/dao/StatisticDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/po/Course/CourseVOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/po/Course/CourseVOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/po/User/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/po/User/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/po/statistic/StatisticCourseVOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/po/statistic/StatisticCourseVOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/po/statistic/StatisticStudentVOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/po/statistic/StatisticStudentVOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/service/StatisticService.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/service/StatisticService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/service/XmlService.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/service/XmlService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/ChoiceVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/ChoiceVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/CourseVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/StatisticCourseVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/StatisticCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/StatisticStudentVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/StatisticStudent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/StudentVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/StatisticStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/StatisticStudent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593512877904</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="完善XML转Bean功能，重命名了几个bean">
+      <created>1593541550772</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593541550772</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -186,13 +174,14 @@
     <MESSAGE value="删除systemBC改成center_system" />
     <MESSAGE value="本地改动" />
     <MESSAGE value="完善XMLService及相关controller接口示例" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善XMLService及相关controller接口示例" />
+    <MESSAGE value="完善XML转Bean功能，重命名了几个bean" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善XML转Bean功能，重命名了几个bean" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1593540787292">
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1593588929698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593540787292" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593588929698" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1593540508811">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -225,14 +214,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="718" y="234" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593505156452" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1593512919461">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1593541572159">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593512919461" />
-    <state x="753" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593532102737">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593541572159" />
+    <state x="753" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593586985029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="753" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593532102737" />
+    <state x="753" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593586985029" />
     <state x="334" y="180" key="new project wizard" timestamp="1593417993538">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
