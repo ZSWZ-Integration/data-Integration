@@ -1,5 +1,5 @@
 import dicttoxml
-
+import xmlformatter
 from educationalSystem_B.service.user import userService
 from educationalSystem_B.vo.choiceVO import Choice
 from educationalSystem_B.vo.courseVO import Course
@@ -122,19 +122,18 @@ def dropCourse(Sno,Cno):
             student = userService.getStudentInfo(Sno)  # studentVO
             choice = Choice(Cno, student, "0")  # choiceVO
             dict_a = xs.convert2dict(choice)
-            print(dict_a)
-            xml=Converter.collectionToXML(dict_a)
-            #xml = dicttoxml.dicttoxml(dict_a, attr_type=False,ensure_ascii=False)
+            xml=xs.trans_dict_to_xml(dict_a)
+            #xml = dicttoxml.dicttoxml(dict_a, attr_type=False)
+            print(xml)
+            return False
+            # xml=Converter.collectionToXML(dict_a)
+            # formatter = xmlformatter.Formatter(indent="1", indent_char='\t', preserve=["literal"])
+            # xml_format = formatter.format_string(xml)
             #cList={};
             #cList["choice"]=choice
             #root=Converter.collectionToXML(cList)
             #root=Converter.classToXML(choice)
             #xml=Converter.getXmlString(root)
-            print(xml)
-
-
-            return False
-
     except BaseException as e:
         print(e)
         print ("删除选课失败...")

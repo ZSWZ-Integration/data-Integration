@@ -126,6 +126,23 @@ def convert2dict(object):
     except BaseException as e:
         #print(e)
         return object
+def trans_dict_to_xml(data):
+    """
+    将 dict 对象转换成微信支付交互所需的 XML 格式数据
+    :param data: dict 对象
+    :return: xml 格式数据
+    """
+    xml = []
+    for k in sorted(data.keys()):
+        v = data.get(k)
+        print(v)
+        if isinstance(v, dict):
+            for d in v:
+                trans_dict_to_xml(d)
+        if k == 'detail' and not v.startswith('<![CDATA['):
+            v = '<![CDATA[{}]]>'.format(v)
+        xml.append('<{key}>{value}</{key}>'.format(key=k, value=v))
+    return '<xml>{}</xml>'.format(''.join(xml))
 
 # if __name__ == '__main__':
 #     p1 = Person('dredfsam','男','133665')
