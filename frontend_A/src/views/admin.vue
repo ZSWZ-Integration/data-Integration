@@ -356,7 +356,7 @@ export default {
         getClasses(){
             getAllCourses().then(res => {
                 this.classes = res.data;
-                this.classes.foreach(course => {
+                this.classes.forEach(course => {
                 if(course.cno.substring(0, 1) != "A"){
                     course.editable = true;
                 }else {
