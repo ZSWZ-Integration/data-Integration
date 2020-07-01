@@ -76,7 +76,7 @@ export default {
         dropClass(cno){
             
             dropCourse(cno, this.sno).then(res => {
-                if(res.data == true){
+                if(res.data.content == true){
                     this.classes = this.classes.filter(item => item.cno != cno);
                     this.Alert("退课成功");
                 }else {
@@ -96,10 +96,15 @@ export default {
         }
 
     }, mounted(){
-        GetStudentCourse().then(res => {
-            this.classes = res.data;
+        this.sno = this.$store.getters.userId;
+        if(this.sno == 0){
+            this.$router.push("/login");
+        }
+        GetStudentCourse(this.sno).then(res => {
+            this.classes = res.data.content;
         }).catch(err => {
             err;
+            console.log(err);
             this.Alert("something went wronge.");
         })
     }

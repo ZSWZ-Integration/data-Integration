@@ -214,10 +214,10 @@
         ////console.log(this.$store.state.userId);
         this.loginPressed = true;
         userLogin(this.userName, this.password).then(res => {
-          if(res.data == null){
+          if(res.data.content == null){
             this.Alert("登录失败");
           }else{
-            this.$store.commit('setUserId', res.data.sno);
+            this.$store.commit('setUserId', res.data.content.sno);
             this.$router.push("/admin");
           }
         })

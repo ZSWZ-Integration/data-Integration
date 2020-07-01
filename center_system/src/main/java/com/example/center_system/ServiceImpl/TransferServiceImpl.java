@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class TransferServiceImpl implements TransferService {
 
     @Override
-    public String xmlTransfer(String xmlMessage) {
+    public String xmlTransfer(String xmlMessage, String xsltUri) {
         return null;
     }
 

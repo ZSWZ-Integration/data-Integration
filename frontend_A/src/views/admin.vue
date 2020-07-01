@@ -215,8 +215,8 @@
             </v-tab-item>
             <v-tab>获取共享课程</v-tab>
             <v-tab-item>
-                    <v-col cols="6"> <v-btn @click="getShare('A')">获取A院系课程</v-btn></v-col>
                     <v-col cols="6"> <v-btn @click="getShare('B')">获取B院系课程</v-btn></v-col>
+                    <v-col cols="6"> <v-btn @click="getShare('C')">获取C院系课程</v-btn></v-col>
                 
             </v-tab-item>
                
@@ -270,7 +270,7 @@ export default {
         },
         deleteClass(cno){
             deleteCourse(cno).then(res => {
-                if(res.data == true){
+                if(res.data.content == true){
                     this.classes = this.classes.filter(item => item.cno != cno);
                     this.Alert("删除成功");
                 }else {
@@ -289,10 +289,9 @@ export default {
         confirmEdit(){
             //TODO:点击后不能关闭dialog
             this.dialogEdit = false;
-            this.classEditing = null;
             var c = this.classEditing;
             updateCourse(c).then(res => {
-                if(res.data == true){
+                if(res.data.content == true){
                     this.Alert("更新成功");
                     //将本地的列表修改
                     this.classes.forEach(item => {
@@ -315,7 +314,7 @@ export default {
         },
         confirmNew(){
             this.dialogNew = false;
-            this.newClass.type = "A";
+            this.newClass.ctype = "A";
             if(this.newClass.share){
                 this.newClass.share = "1"
             }else {
@@ -323,9 +322,10 @@ export default {
             }
             console.log(this.newClass);
             addCourse(this.newClass).then(res => {
-                if(res.data == true){
+                if(res.data.content == true){
                     this.Alert("添加成功");
                     this.newClass = {};
+                    this.getClasses();
                 }else {
                     this.Alert("添加失败")
                     this.newClass = {};
@@ -342,7 +342,7 @@ export default {
         },
         getShare(type){
             getOtherCourses(type).then(res => {
-                if(res.data == true){
+                if(res.data.content == true){
                     this.Alert("成功");
                     this.getClasses();
                 }else {
@@ -355,9 +355,9 @@ export default {
         },
         getClasses(){
             getAllCourses().then(res => {
-                this.classes = res.data;
-                this.classes.foreach(course => {
-                if(course.cno.substring(0, 1) != "A"){
+                this.classes = res.data.content;
+                this.classes.forEach(course => {
+                if(course.cno.substring(0, 1) == "A"){
                     course.editable = true;
                 }else {
                     course.editable = false;
