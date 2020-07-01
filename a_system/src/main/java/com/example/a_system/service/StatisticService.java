@@ -19,13 +19,15 @@ import java.util.List;
 public class StatisticService {
     @Autowired
     StatisticRepository statisticRepository;
+    @Autowired
+    XmlService xmlService;
 
     public String getAllCourseStatistic(){
         try {
             List<StatisticCourse> statisticCourseVOS = statisticRepository.getAllCourseStatistic();
             //封装成大的xml,向集成服务器发送统计的xml数据
             StatisticCourseListVO statisticCourseListVO=new StatisticCourseListVO(statisticCourseVOS);
-            String xml = object2Xml(statisticCourseListVO);      //大xml
+            String xml = xmlService.object2Xml(statisticCourseListVO);      //大xml
             return xml;
         }catch (Exception e){
             e.printStackTrace();
@@ -38,7 +40,7 @@ public class StatisticService {
             List<StatisticStudent> statisticStudentVOS=statisticRepository.getAllStudentStatistic();
             //Todo:封装成大的xml,向集成服务器发送统计的xml数据
             StatisticStudentListVO statisticStudentListVO=new StatisticStudentListVO(statisticStudentVOS);
-            String xml = object2Xml(statisticStudentListVO);      //大xml
+            String xml = xmlService.object2Xml(statisticStudentListVO);      //大xml
             return xml;
         }catch (Exception e){
         e.printStackTrace();
@@ -46,15 +48,6 @@ public class StatisticService {
         }
     }
 
-    public String object2Xml(Object object) throws JsonProcessingException {
-        XmlMapper xmlMapper = new XmlMapper();
-        return xmlMapper.writeValueAsString(object);
-    }
-
-    public Object xml2Object(String xml, Class<?> cls) throws JsonProcessingException {
-        ObjectMapper objectMapper = new XmlMapper();
-        return objectMapper.readValue(xml, cls);
-    }
 
 
 }
