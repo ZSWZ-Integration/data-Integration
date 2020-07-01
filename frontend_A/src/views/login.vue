@@ -154,11 +154,11 @@
                     forgot password?
                 </v-btn>
             </v-row>
-            <v-row class="mr-5 ml-5 mb-5" align="center" justify="center">
+            <!-- <v-row class="mr-5 ml-5 mb-5" align="center" justify="center">
                 <v-btn text color="blue" v-if="is_signup==0" @click="isAdmin">
                     is admin?
                 </v-btn>
-            </v-row>
+            </v-row> -->
           </v-card>
         </v-row>
       </v-col>
@@ -233,7 +233,11 @@
             this.loginPressed = false;
           }else{
             this.$store.commit('setUserId', res.data.content.sno);
-            this.$router.push("/student");
+            if(this.userName == "root"){
+              this.$router.push("/admin");
+            }else {
+              this.$router.push("/student");
+            }
           }
         })
 

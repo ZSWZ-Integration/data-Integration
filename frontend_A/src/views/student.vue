@@ -85,7 +85,7 @@ export default {
         },
         chooseClass(cno){
             chooseCourse(cno, this.sno).then(res => {
-                if(res.data == true){
+                if(res.data.content == true){
                     this.Alert("选课成功");
                 }else {
                     this.Alert("此课已选，不可重复选课")
@@ -104,9 +104,11 @@ export default {
         }
 
     }, mounted(){
-        if(this.$store.getters.userId == 0){
+        this.sno = this.$store.getters.userId;
+        if(this.sno == 0){
             this.$router.push("/login");
         }
+        
         getAllCourses().then(res => {
             this.classes = res.data.content;
             //判断课程是否可选，非本院且share为0则不可选。
