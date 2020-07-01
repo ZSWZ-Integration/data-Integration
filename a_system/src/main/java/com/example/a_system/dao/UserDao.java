@@ -23,24 +23,20 @@ public class UserDao implements UserRepository {
 
     @Override
     public boolean addStudent(String acc, String password, String createDate, String sno, String sname, String sex) {
-        try{
-            jdbcTemplate.update("INSERT INTO `student` VALUES (?,?,?,?,?,?)",acc,password,createDate,sno,sname,sex);
-            return true;
-        }catch (Exception e){
-            e.printStackTrace();
-            return false;
-        }
+        jdbcTemplate.update("INSERT INTO `student` VALUES (?,?,?,?,?,?)",acc,password,createDate,sno,sname,sex);
+        return true;
+
     }
 
     @Override
     public boolean deleteStudent(String sno) {
-        try{
+       // try{
             jdbcTemplate.update("delete from student where sno=?",sno);
             return true;
-        }catch (Exception e){
-            e.printStackTrace();
-            return false;
-        }
+//        }catch (Exception e){
+//            e.printStackTrace();
+//            return false;
+//        }
     }
 
     @Override

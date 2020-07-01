@@ -20,6 +20,10 @@ public class Student {
         this.sex = sex;
     }
 
+    public Student() {
+        super();
+    }
+
     @JacksonXmlProperty(localName = "学生账号A")
     public String getAcc() {
         return acc;

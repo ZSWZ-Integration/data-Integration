@@ -10,6 +10,11 @@ public class Course {
     private String ctime;
     private String credit;
     private String share;
+
+    public Course() {
+        super();
+    }
+
     private String ctype;
 
 

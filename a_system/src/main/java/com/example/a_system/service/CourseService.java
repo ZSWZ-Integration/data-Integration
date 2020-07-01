@@ -3,10 +3,11 @@ package com.example.a_system.service;
 import com.example.a_system.dao.Repository.CourseRepository;
 import com.example.a_system.dao.Repository.UserRepository;
 import com.example.a_system.po.Course.Choice;
-import com.example.a_system.vo.ChoiceVO;
-import com.example.a_system.vo.Course;
-import com.example.a_system.vo.Student;
+import com.example.a_system.po.Course.CoursePO;
+import com.example.a_system.vo.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -48,7 +49,7 @@ public class CourseService {
                 ChoiceVO choiceVO = new ChoiceVO(Cno, student, "0");  //ChoiceVO
                 //给集成服务器发送xml
                 String result="fail";
-                String xml = xmlService.object2Xml(choiceVO);
+                String xml = object2Xml(choiceVO);
                 System.out.println("xml is "+xml);
                 if(Cno.substring(0,1).equals("B")){  //选B院系的课
                     result=xmlService.postRequest(xml,"http://localhost:8080/transfer/A_choose_B");
@@ -77,7 +78,7 @@ public class CourseService {
 
                 //给集成服务器发送xml
                 String result="fail";
-                String xml = xmlService.object2Xml(choice);
+                String xml = object2Xml(choice);
                 if(Cno.substring(0,1).equals("B")){  //退B院系的课
                     result= xmlService.postRequest(xml,"http://localhost:8080/transfer/A_drop_B");
                 }
@@ -102,30 +103,25 @@ public class CourseService {
 
     public List<com.example.a_system.po.Course.CoursePO> getAllCourse(){
         List<com.example.a_system.po.Course.CoursePO> courses= courseRepository.getAllCourse();
-//        System.out.println("---------------courses size is "+courses.size());
-//        System.out.println(courses.get(0).getCname());
         return courses;
     }
 
     public boolean getOtherCourses(String type){    //获取外院系的共享课程，type是外院B或C。注意：此处要把外院系课程的share变为0后才能存入本地数据库
         try {
+            String xml="";
             if (type.equals("B")) {   //获取外院B的共享课程
                 //从集成服务器获取xml
-                String xml = xmlService.getRequest("http://localhost:8080/transfer/get_B_courses");
-                //Todo:解析xml成CourseVO对象
-
-
-                //将课程数据存入本院数据库
+                xml = xmlService.getRequest("http://localhost:8080/transfer/get_B_courses");
 
             } else if (type.equals("C")) {      //获取外院C的共享课程
                 //从集成服务器获取xml
-                String xml = xmlService.getRequest("http://localhost:8080/transfer/get_C_courses");
-                //Todo:解析xml成CourseVO对象
-
-
-                //将课程数据存入本院数据库
-
-
+                xml = xmlService.getRequest("http://localhost:8080/transfer/get_C_courses");
+            }
+            //解析xml成CourseListVO对象
+            CourseListVO courseListVO= (CourseListVO) xml2Object(xml,CourseListVO.class);
+            //将课程数据存入本院数据库
+            for(Course c:courseListVO.getCourseList()){
+                courseRepository.addCourse(c.getCno(),c.getCname(),c.getCtime(),c.getTeacher(),c.getCredit(),c.getCtype(),c.getShare());
             }
             return true;
         }catch (Exception e) {
@@ -139,9 +135,9 @@ public class CourseService {
             for (Course c : courses) {
                 c.setShare("0");
             }
-            //Todo:封装成大的xml文件，发送给集成服务器
-            String xml = "";      //大的xml文件
-
+            //封装成大的xml文件，发送给集成服务器
+            CourseListVO courseListVO=new CourseListVO(courses);
+            String xml = object2Xml(courseListVO);//大的xml文件
             return xml;
         }catch (Exception e){
             e.printStackTrace();
@@ -151,15 +147,14 @@ public class CourseService {
 
     public String othersAddCourse(String xml){  //外院系学生的选课
         try {
-            //Todo:解析xml文件，转成StudentVO和ChoiceVO对象
-
-
+            //解析xml文件，转成ChoiceVO对象
+            ChoiceVO choiceVO= (ChoiceVO) xml2Object(xml,ChoiceVO.class);
             //将外院系学生的信息加入本院系的学生表里，并把选课信息加入本院的选课表里(周沛辰写)
             //1.调用userRepository的addStudent接口
-
+            Student student=choiceVO.getStudent();
+            userRepository.addStudent(student.getAcc(),student.getPassword(),student.getCreateDate(),student.getSno(),student.getSname(),student.getSex());
             //2.调用courseRepository的chooseCourse接口
-
-
+            courseRepository.chooseCourse(student.getSno(),choiceVO.getCno());
             return "success";
         }catch (Exception e) {
             return "fail";
@@ -168,14 +163,27 @@ public class CourseService {
 
     public String othersDeleteCourse(String xml){    //外院系学生的退课
         try {
-            //Todo:解析xml文件，获取学生编号sno和课程编号cno即可
-
-
-            //调用deleteCourse，若该学生没有选本院系的课了，则删除该学生的学生信息(周沛辰写)
-
+            //解析xml文件，转成ChoiceVO对象(获取学生编号sno和课程编号cno即可)
+            ChoiceVO choiceVO= (ChoiceVO) xml2Object(xml,ChoiceVO.class);
+            //调用dropCourse，若该学生没有选本院系的课了，则删除该学生的学生信息(周沛辰写)
+            Student student=choiceVO.getStudent();
+            courseRepository.dropCourse(student.getSno(),choiceVO.getCno());
+            List<CoursePO> courses=courseRepository.getStudentCourse(student.getSno());
+            if(courses.size()==0)
+                userRepository.deleteStudent(student.getSno());
             return "success";
         }catch (Exception e) {
             return "fail";
         }
+    }
+
+    public String object2Xml(Object object) throws JsonProcessingException {
+        XmlMapper xmlMapper = new XmlMapper();
+        return xmlMapper.writeValueAsString(object);
+    }
+
+    public Object xml2Object(String xml, Class<?> cls) throws JsonProcessingException {
+        ObjectMapper objectMapper = new XmlMapper();
+        return objectMapper.readValue(xml, cls);
     }
 }
