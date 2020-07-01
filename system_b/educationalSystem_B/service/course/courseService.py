@@ -1,8 +1,11 @@
-from educationalSystem_B import models;
-from educationalSystem_B.models import Choose
+import dicttoxml
+
 from educationalSystem_B.service.user import userService
 from educationalSystem_B.vo.choiceVO import Choice
 from educationalSystem_B.vo.courseVO import Course
+from educationalSystem_B.service.xml.xmlService import Converter
+from educationalSystem_B.service.xml import xmlService as xs
+
 
 
 # import pymssql
@@ -94,8 +97,8 @@ def chooseCourse(Sno,Cno):
         else:   #Todo:选的是外院系的课，需要调用集成服务器
             student=userService.getStudentInfo(Sno)   #studentVO
             student.setPwd("noPassword")  #重设密码
-            choiceInfo=getChoiceInfo(Sno,Cno)
-            choice=Choice(choiceInfo[0],student,choiceInfo[2])  #choiceVO
+            choice=Choice(Cno,student,"0")  #choiceVO
+
 
 
             return False
@@ -117,8 +120,17 @@ def dropCourse(Sno,Cno):
             return True
         else:       #Todo:退外院系的课，需要调用集成服务器
             student = userService.getStudentInfo(Sno)  # studentVO
-            choiceInfo = getChoiceInfo(Sno, Cno)
-            choice = Choice(choiceInfo[0], student, choiceInfo[2])  # choiceVO
+            choice = Choice(Cno, student, "0")  # choiceVO
+            dict_a = xs.convert2dict(choice)
+            print(dict_a)
+            xml=Converter.collectionToXML(dict_a)
+            #xml = dicttoxml.dicttoxml(dict_a, attr_type=False,ensure_ascii=False)
+            #cList={};
+            #cList["choice"]=choice
+            #root=Converter.collectionToXML(cList)
+            #root=Converter.classToXML(choice)
+            #xml=Converter.getXmlString(root)
+            print(xml)
 
 
             return False
@@ -217,3 +229,4 @@ def othersDeleteCourse():   #外院系学生的退课
     #调用deleteCourse，若该学生没有选本院系的课了，则删除该学生的学生信息(周沛辰写)
 
     return False
+

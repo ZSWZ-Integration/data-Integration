@@ -1,21 +1,21 @@
 package com.example.a_system.controller;
 
 import com.example.a_system.service.CourseService;
+import com.example.a_system.service.StatisticService;
 import com.example.a_system.vo.Response;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class XmlController {  //Todo:完善接收xml的controller
     @Autowired
     CourseService courseService;
+    @Autowired
+    StatisticService statisticService;
 
-    @RequestMapping("/getSharedCourses")
+    @GetMapping("/getSharedCourses")
     public String  getSharedCourses(){ //获取本院系的共享课程，返回xml的字符串
         return courseService.shareCourses();
     }
@@ -30,5 +30,17 @@ public class XmlController {  //Todo:完善接收xml的controller
         return courseService.othersDeleteCourse(string);
 
     }
+
+    @GetMapping("/getAllCourseStatistic")
+    public String  getAllCourseStatistic(){ //获取本院系的共享课程，返回xml的字符串
+        return statisticService.getAllCourseStatistic();
+    }
+
+    @GetMapping("/getAllStudentStatistic")
+    public String  getAllStudentStatistic(){ //获取本院系的共享课程，返回xml的字符串
+        return statisticService.getAllStudentStatistic();
+    }
+
+
 
 }

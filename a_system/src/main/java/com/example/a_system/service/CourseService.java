@@ -48,11 +48,11 @@ public class CourseService {
             try {
                 StudentVO student = userRepository.getStudentInfo(Sno); //StudentVO
                 student.setPassword("noPassword");     //修改掉password,不让学生登录外院系的教务系统
-                Choice choicePO = courseRepository.getChoiceInfo(Sno, Cno);
-                ChoiceVO choiceVO = new ChoiceVO(choicePO.getCno(), student, choicePO.getGrade());  //ChoiceVO
+                ChoiceVO choiceVO = new ChoiceVO(Cno, student, "0");  //ChoiceVO
                 //给集成服务器发送xml
                 String result="fail";
                 String xml = xmlService.object2Xml(choiceVO);
+                System.out.println("xml is "+xml);
                 if(Cno.substring(0,1).equals("B")){  //选B院系的课
                     result=xmlService.postRequest(xml,"http://localhost:8080/transfer/A_choose_B");
                 }
@@ -76,8 +76,7 @@ public class CourseService {
         else{               //退外院系的课
             try {
                 StudentVO student=userRepository.getStudentInfo(Sno); //StudentVO
-                Choice choicePO=courseRepository.getChoiceInfo(Sno,Cno);
-                ChoiceVO choice =new ChoiceVO(choicePO.getCno(),student,choicePO.getGrade());  //ChoiceVO
+                ChoiceVO choice =new ChoiceVO(Cno,student,"0");  //ChoiceVO
                 //给集成服务器发送xml
                 String result="fail";
                 String xml = xmlService.object2Xml(choice);
