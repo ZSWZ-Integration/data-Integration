@@ -11,12 +11,14 @@ public class XmlController {
 
     @PostMapping(path = "/post_test", consumes = "application/xml")
     public String postTest(@RequestBody String string) throws JsonProcessingException {
+        System.out.println("postTest...");
         System.out.println(string);
         return "success";
     }
 
     @GetMapping(path = "/get_test")
     public String getTest(){
+        System.out.println("getTest...");
         return "<A系统学生选课信息><课程编号A>12</课程编号A><学生信息A 学号=\"1\"><姓名>邵轶凡syf</姓名><性别>female</性别></学生信息A><学生成绩A>100</学生成绩A></A系统学生选课信息>";
     }
 

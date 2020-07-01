@@ -1,4 +1,4 @@
-from educationalSystem_B.vo import studentVO as s
+from educationalSystem_B.vo import student as s
 import pyodbc
 
 # 数据库服务器信息

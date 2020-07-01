@@ -77,16 +77,16 @@ create table course
 	share char(1)
 );
 
-insert into course(id,name,credit,teacher,campus,share) values ('b01','数据结构','4','何章','仙林','1')
-insert into course(id,name,credit,teacher,campus,share) values ('b02','C++语言基础','5','潘李','鼓楼','1')
-insert into course(id,name,credit,teacher,campus,share) values ('b03','C++程序设计','5','贺阳','鼓楼','0')
-insert into course(id,name,credit,teacher,campus,share) values ('b04','数据科学基础','4','陈焕','仙林','1')
-insert into course(id,name,credit,teacher,campus,share) values ('b05','数据库管理基础','3','杨晓','鼓楼','1')
-insert into course(id,name,credit,teacher,campus,share) values ('b06','数据库开发','4','杨晓','鼓楼','1')
-insert into course(id,name,credit,teacher,campus,share) values ('b07','编译原理','2','费暮','鼓楼','0')
-insert into course(id,name,credit,teacher,campus,share) values ('b08','软件体系结构','4','林涵','鼓楼','1')
-insert into course(id,name,credit,teacher,campus,share) values ('b09','需求工程','3','韩华','鼓楼','1')
-insert into course(id,name,credit,teacher,campus,share) values ('b10','商业模式','3','李延','鼓楼','1')
+insert into course(id,name,credit,teacher,campus,share) values ('B01','数据结构','4','何章','仙林','1')
+insert into course(id,name,credit,teacher,campus,share) values ('B02','C++语言基础','5','潘李','鼓楼','1')
+insert into course(id,name,credit,teacher,campus,share) values ('B03','C++程序设计','5','贺阳','鼓楼','0')
+insert into course(id,name,credit,teacher,campus,share) values ('B04','数据科学基础','4','陈焕','仙林','1')
+insert into course(id,name,credit,teacher,campus,share) values ('B05','数据库管理基础','3','杨晓','鼓楼','1')
+insert into course(id,name,credit,teacher,campus,share) values ('B06','数据库开发','4','杨晓','鼓楼','1')
+insert into course(id,name,credit,teacher,campus,share) values ('B07','编译原理','2','费暮','鼓楼','0')
+insert into course(id,name,credit,teacher,campus,share) values ('B08','软件体系结构','4','林涵','鼓楼','1')
+insert into course(id,name,credit,teacher,campus,share) values ('B09','需求工程','3','韩华','鼓楼','1')
+insert into course(id,name,credit,teacher,campus,share) values ('B10','商业模式','3','李延','鼓楼','1')
 
 create table choose
 (
