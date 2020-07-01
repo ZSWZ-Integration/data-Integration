@@ -4,7 +4,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="/">
 <学生选课信息>
-	<课程编号><xsl:value-of select="课程编号A"/></课程编号>
+	<课程编号><xsl:value-of select="A系统学生选课信息/课程编号A"/></课程编号>
 	<学生信息>
 		<学生账号><xsl:value-of select="A系统学生选课信息/学生信息A/学生账号A"/></学生账号>
 		<学生密码><xsl:value-of select="A系统学生选课信息/学生信息A/学生密码A"/></学生密码>
