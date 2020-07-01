@@ -10,9 +10,9 @@ import java.util.List;
 @Repository
 public interface CourseRepository {
     //管理员操作
-    public abstract boolean addCourse(String Cno,String Cname,String place,String teacher,String credit,String type,String isShared);
+    public abstract boolean addCourse(String Cno,String Cname,String ctime,String teacher,String credit,String type,String isShared);
     public abstract boolean deleteCourse(String Cno);
-    public abstract boolean updateCourse(String Cno,String Cname,String place,String teacher,String credit,String type,String isShared);
+    public abstract boolean updateCourse(String Cno,String Cname,String ctime,String teacher,String credit,String type,String isShared);
     //学生操作
     public abstract boolean chooseCourse(String Sno,String Cno);
     public abstract boolean dropCourse(String Sno,String Cno);

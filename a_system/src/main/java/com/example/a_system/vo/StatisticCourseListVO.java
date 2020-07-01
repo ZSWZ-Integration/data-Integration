@@ -15,6 +15,10 @@ public class StatisticCourseListVO {
         super();
     }
 
+    public StatisticCourseListVO(List<StatisticCourse> statisticCourseList) {
+        this.statisticCourseList = statisticCourseList;
+    }
+
     @JacksonXmlElementWrapper(localName = "课程列表A")
     @JacksonXmlProperty(localName = "课程信息A")
     public List<StatisticCourse> getStatisticCourseList() {

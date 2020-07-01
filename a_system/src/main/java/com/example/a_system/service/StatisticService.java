@@ -4,7 +4,9 @@ import com.example.a_system.dao.Repository.StatisticRepository;
 
 import com.example.a_system.vo.StatisticCourse;
 
+import com.example.a_system.vo.StatisticCourseListVO;
 import com.example.a_system.vo.StatisticStudent;
+import com.example.a_system.vo.StatisticStudentListVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,14 +16,15 @@ import java.util.List;
 public class StatisticService {
     @Autowired
     StatisticRepository statisticRepository;
+    @Autowired
+    XmlService xmlService;
 
     public String getAllCourseStatistic(){
         try {
             List<StatisticCourse> statisticCourseVOS = statisticRepository.getAllCourseStatistic();
-            //Todo:封装成大的xml,向集成服务器发送统计的xml数据
-            String xml="";      //大xml
-
-
+            //封装成大的xml,向集成服务器发送统计的xml数据
+            StatisticCourseListVO statisticCourseListVO=new StatisticCourseListVO(statisticCourseVOS);
+            String xml=xmlService.object2Xml(statisticCourseListVO);      //大xml
             return xml;
         }catch (Exception e){
             e.printStackTrace();
@@ -33,8 +36,8 @@ public class StatisticService {
         try{
             List<StatisticStudent> statisticStudentVOS=statisticRepository.getAllStudentStatistic();
             //Todo:封装成大的xml,向集成服务器发送统计的xml数据
-            String xml="";      //大xml
-
+            StatisticStudentListVO statisticStudentListVO=new StatisticStudentListVO(statisticStudentVOS);
+            String xml=xmlService.object2Xml(statisticStudentListVO);      //大xml
             return xml;
         }catch (Exception e){
         e.printStackTrace();
