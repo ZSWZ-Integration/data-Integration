@@ -2,9 +2,7 @@ package com.example.a_system.dao;
 
 import com.example.a_system.dao.Repository.UserRepository;
 import com.example.a_system.po.User.StudentMapper;
-import com.example.a_system.vo.StudentVO;
-import com.example.a_system.vo.StudentVO;
-import jdk.nashorn.internal.scripts.JD;
+import com.example.a_system.vo.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -15,7 +13,7 @@ public class UserDao implements UserRepository {
     JdbcTemplate jdbcTemplate;
 
     @Override
-    public StudentVO login(String username, String password) {
+    public Student login(String username, String password) {
         try {
             return jdbcTemplate.queryForObject("select * from student where acc=? and password=?", new StudentMapper(), username, password);
         }catch (Exception e){
@@ -46,7 +44,7 @@ public class UserDao implements UserRepository {
     }
 
     @Override
-    public StudentVO getStudentInfo(String sno) {
+    public Student getStudentInfo(String sno) {
         return jdbcTemplate.queryForObject("select * from student where Sno=?",new StudentMapper(),sno);
     }
 }

@@ -1,9 +1,8 @@
 package com.example.a_system.dao.Repository;
 
 import com.example.a_system.po.Course.Choice;
-import com.example.a_system.po.Course.Course;
 
-import com.example.a_system.vo.CourseVO;
+import com.example.a_system.vo.Course;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -17,10 +16,10 @@ public interface CourseRepository {
     //学生操作
     public abstract boolean chooseCourse(String Sno,String Cno);
     public abstract boolean dropCourse(String Sno,String Cno);
-    public abstract List<Course> getStudentCourse(String Sno);
+    public abstract List<com.example.a_system.po.Course.Course> getStudentCourse(String Sno);
 
-    public abstract List<Course> getAllCourse();
-    public abstract List<CourseVO> getSharedCourse();
+    public abstract List<com.example.a_system.po.Course.Course> getAllCourse();
+    public abstract List<Course> getSharedCourse();
     public abstract int getACoursesNum();
 
     public abstract Choice getChoiceInfo(String sno, String cno);
