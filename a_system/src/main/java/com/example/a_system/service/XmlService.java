@@ -1,8 +1,5 @@
 package com.example.a_system.service;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -19,17 +16,6 @@ import java.nio.charset.StandardCharsets;
 
 @Service
 public class XmlService {
-
-    //将注释过的VO转成xml String
-    public String object2Xml(Object object) throws JsonProcessingException {
-        XmlMapper xmlMapper = new XmlMapper();
-        return xmlMapper.writeValueAsString(object);
-    }
-
-    public Object xml2Object(String xml, Class<?> cls) throws JsonProcessingException {
-        ObjectMapper objectMapper = new XmlMapper();
-        return objectMapper.readValue(xml, cls);
-    }
 
     //发送post请求，返回成功或失败信息。uri示例："http://localhost:8080/transfer/post_test"
     public String postRequest(String xml, String uri) throws IOException {

@@ -19,10 +19,28 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01246591-f4c4-4acc-b175-39c2b524be3a" name="Default Changelist" comment="完善XML转Bean功能，重命名了几个bean">
-      <change afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/StatisticStudentListVO.java" afterDir="false" />
+    <list default="true" id="01246591-f4c4-4acc-b175-39c2b524be3a" name="Default Changelist" comment="StatisticStudentListVO">
+      <change afterPath="$PROJECT_DIR$/a_system/src/test/java/com/example/a_system/XmlTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/Service/ElectiveService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/Service/ShareService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/Service/StatisticService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/ServiceImpl/ElectiveServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/ServiceImpl/ShareServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/ServiceImpl/StatisticServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/vo/StatisticCourse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/vo/StatisticCourseListVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/vo/StatisticStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/vo/StatisticStudentListVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/service/StatisticService.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/service/StatisticService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/service/XmlService.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/service/XmlService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/StatisticCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/StatisticCourse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/StatisticStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/StatisticStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/a_system/src/main/java/com/example/a_system/vo/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/Service/TransferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/Service/TransferService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/ServiceImpl/TransferServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/ServiceImpl/TransferServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,20 +84,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/vo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\wty\IdeaProjects\data-Integration" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Personal Files\南京大学\大学课程资料\大三下（第四小学期）\大数据集成与应用\作业\大作业\github\data-Integration\a_system\sql" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\wty\IdeaProjects\data-Integration\center_system\src\main\java\com\example\center_system\vo" />
+      <recent name="C:\Users\wty\IdeaProjects\data-Integration" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.XmlTest.test">
     <configuration name="CenterSystemApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.center_system.CenterSystemApplication" />
       <module name="center_system" />
@@ -93,8 +112,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="XmlTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="a_system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.a_system.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.a_system" />
+      <option name="MAIN_CLASS_NAME" value="com.example.a_system.XmlTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.XmlTest.test" />
         <item itemvalue="Application.CenterSystemApplication" />
       </list>
     </recent_temporary>
@@ -148,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593541550772</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="StatisticStudentListVO">
+      <created>1593589081621</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1593589081621</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -175,13 +218,14 @@
     <MESSAGE value="本地改动" />
     <MESSAGE value="完善XMLService及相关controller接口示例" />
     <MESSAGE value="完善XML转Bean功能，重命名了几个bean" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善XML转Bean功能，重命名了几个bean" />
+    <MESSAGE value="StatisticStudentListVO" />
+    <option name="LAST_COMMIT_MESSAGE" value="StatisticStudentListVO" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1593588929698">
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1593592974787">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593588929698" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593592974787" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1593540508811">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -190,22 +234,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593417273909" />
-    <state width="1877" height="2" key="GridCell.Tab.0.bottom" timestamp="1593513981251">
+    <state width="1877" height="210" key="GridCell.Tab.0.bottom" timestamp="1593592763411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593513981251" />
-    <state width="1877" height="2" key="GridCell.Tab.0.center" timestamp="1593513981251">
+    <state width="1877" height="210" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593592763411" />
+    <state width="1877" height="210" key="GridCell.Tab.0.center" timestamp="1593592763411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="2" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593513981251" />
-    <state width="1877" height="2" key="GridCell.Tab.0.left" timestamp="1593513981251">
+    <state width="1877" height="210" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593592763411" />
+    <state width="1877" height="210" key="GridCell.Tab.0.left" timestamp="1593592763410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="2" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593513981251" />
-    <state width="1877" height="2" key="GridCell.Tab.0.right" timestamp="1593513981251">
+    <state width="1877" height="210" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593592763410" />
+    <state width="1877" height="210" key="GridCell.Tab.0.right" timestamp="1593592763411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="2" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593513981251" />
+    <state width="1877" height="210" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593592763411" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1593240468399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -214,14 +258,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="718" y="234" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593505156452" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1593541572159">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1593589086792">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593541572159" />
-    <state x="753" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593586985029">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593589086792" />
+    <state x="753" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593592162386">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="753" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593586985029" />
+    <state x="753" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593592162386" />
     <state x="334" y="180" key="new project wizard" timestamp="1593417993538">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

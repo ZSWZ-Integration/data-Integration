@@ -1,4 +1,4 @@
-package com.example.a_system.vo;
+package com.example.center_system.vo;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
@@ -17,11 +17,7 @@ public class StatisticCourse {
         this.count = count;
     }
 
-    public StatisticCourse() {
-        super();
-    }
-
-    @JacksonXmlProperty(localName = "课程编号A")
+    @JacksonXmlProperty(localName = "课程编号")
     public String getCno() {
         return cno;
     }
@@ -30,7 +26,7 @@ public class StatisticCourse {
         this.cno = cno;
     }
 
-    @JacksonXmlProperty(localName = "课程名A")
+    @JacksonXmlProperty(localName = "课程名")
     public String getCname() {
         return cname;
     }
@@ -39,7 +35,7 @@ public class StatisticCourse {
         this.cname = cname;
     }
 
-    @JacksonXmlProperty(localName = "授课教师A")
+    @JacksonXmlProperty(localName = "授课教师")
     public String getTeacher() {
         return teacher;
     }
@@ -48,7 +44,7 @@ public class StatisticCourse {
         this.teacher = teacher;
     }
 
-    @JacksonXmlProperty(localName = "课程学分A")
+    @JacksonXmlProperty(localName = "课程学分")
     public String getCredit() {
         return credit;
     }
@@ -57,7 +53,7 @@ public class StatisticCourse {
         this.credit = credit;
     }
 
-    @JacksonXmlProperty(localName = "选课人数A")
+    @JacksonXmlProperty(localName = "选课人数")
     public int getCount() {
         return count;
     }
