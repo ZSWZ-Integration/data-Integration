@@ -109,10 +109,10 @@ def chooseCourse(Sno,Cno):
             elif(Cno[0:1]=="C"):   #选C院系的课
                 result=xs.postRequest(xml, "http://localhost:8080/elective/B_choose_C")
 
-            if(result=="success"):
-                return True
-            else:
+            if(result=="fail"):
                 return False
+            else:
+                return True
     except BaseException as e:
         print(e)
         print("选课失败...")
