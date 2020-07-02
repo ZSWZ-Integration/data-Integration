@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6be8cfc-2c64-4e32-8676-1ce9116dc891" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../center_system/src/main/java/com/example/center_system/controller/XmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../center_system/src/main/java/com/example/center_system/controller/XmlController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py" beforeDir="false" afterPath="$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/educationalSystem_B/service/user/userService.py" beforeDir="false" afterPath="$PROJECT_DIR$/educationalSystem_B/service/user/userService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/educationalSystem_B/service/xml/xmlService.py" beforeDir="false" afterPath="$PROJECT_DIR$/educationalSystem_B/service/xml/xmlService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/educationalSystem_B/sql/b.sql" beforeDir="false" afterPath="$PROJECT_DIR$/educationalSystem_B/sql/b.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/educationalSystem_B/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/educationalSystem_B/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/educationalSystem_B/vo/choiceVO.py" beforeDir="false" afterPath="$PROJECT_DIR$/educationalSystem_B/vo/choiceVO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/educationalSystem_B/vo/courseVO.py" beforeDir="false" afterPath="$PROJECT_DIR$/educationalSystem_B/vo/course.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/educationalSystem_B/vo/studentVO.py" beforeDir="false" afterPath="$PROJECT_DIR$/educationalSystem_B/vo/student.py" afterDir="false" />
-    </list>
+    <list default="true" id="d6be8cfc-2c64-4e32-8676-1ce9116dc891" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +19,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-950">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="1919">
+              <caret line="218" lean-forward="true" selection-start-line="218" selection-end-line="218" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,7 +43,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/educationalSystem_B/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="141">
@@ -315,7 +307,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4988086" visible="true" weight="0.28689885" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4988086" visible="true" weight="0.25041458" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50119144" side_tool="true" weight="0.3283582" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -408,16 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/educationalSystem_B/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/educationalSystem_B/sql/b.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
@@ -457,8 +439,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/educationalSystem_B/service/course/courseService.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-950">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="1919">
+          <caret line="218" lean-forward="true" selection-start-line="218" selection-end-line="218" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/educationalSystem_B/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
