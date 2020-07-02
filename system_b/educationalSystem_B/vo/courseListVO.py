@@ -9,7 +9,7 @@ class CourseListVO:
     def getCourses(self):
         return self.courses
 
-    def setCno(self, courses):
+    def setCourses(self, courses):
         self.courses = courses
 
 

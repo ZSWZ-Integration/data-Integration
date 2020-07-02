@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import educationalSystem_B.service.course.courseService as course;
 import educationalSystem_B.service.user.userService as user;
+import educationalSystem_B.service.statistic.statisticService as statistic;
 
 def index(request):
     return HttpResponse("This is SystemB index")
@@ -13,7 +14,7 @@ def addCourse(request):
     teacher=request.GET.get("teacher");
     credit=request.GET.get("credit");
     share=request.GET.get("share");
-    result=course.addCourse(cname,place,teacher,credit,share);
+    result=course.addCourse("",cname,place,teacher,credit,share);
     return HttpResponse(result)
 
 def deleteCourse(request):
@@ -53,8 +54,7 @@ def getAllCourse(request):
     return HttpResponse(result)
 
 def getOtherCourses(request):
-    type=request.GET.get("type")
-    result=course.getOtherCourses(type)
+    result=course.getOtherCourses()
     return HttpResponse(result)
 
 def login(request):
@@ -67,13 +67,31 @@ def login(request):
 #Todo:完善接收xml的controller
 
 def getSharedCourses(request):      #获取本院系的共享课程
+    print("getSharedCourses...")
     result=course.shareCourses()
-    return result
+    return HttpResponse(result)
 
 def othersAddCourse(request):       #外院系的选课
-    result=course.othersAddCourse()
+    print("othersAddCourse...")
+    xml=request.body
+    result=course.othersAddCourse(xml)
     return HttpResponse(result)
 
 def othersDeleteCourse(request):    #外院系的退课
-    result=course.othersDeleteCourse()
+    xml = request.body
+    # ctx = {}
+    # if request.POST:
+    #     ctx['rlt'] = request.POST['string']
+    result=course.othersDeleteCourse(xml)
+    return HttpResponse(result)
+
+#统计模块
+def getAllCourseStatistic(request):
+    print("getAllCourseStatistic")
+    result=statistic.getAllCourseStatistic()
+    return HttpResponse(result)
+
+def getAllStudentStatistic(request):
+    print("getAllStudentStatistic")
+    result = statistic.getAllStudentStatistic()
     return HttpResponse(result)

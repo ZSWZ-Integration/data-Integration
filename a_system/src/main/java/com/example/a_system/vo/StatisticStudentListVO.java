@@ -20,7 +20,7 @@ public class StatisticStudentListVO {
     }
 
     @JacksonXmlElementWrapper(localName = "学生选课列表A")
-    @JacksonXmlProperty(localName = "学生选课信息A")
+    @JacksonXmlProperty(localName = "选课信息A")
     public List<StatisticStudent> getStudentList() {
         return studentList;
     }

@@ -17,9 +17,9 @@ public class ElectiveServiceImpl implements ElectiveService {
     public String A_choose_B(String xml) throws TransformerException {
         String post = transferService.xmlTransfer(xml, "src\\main\\resources\\xslt\\elective\\AtoB.xslt").substring(38);
         try{
-            return transferService.postRequest(post, "B_uri");
+            return transferService.postRequest(post, "http://localhost:8082/educationalSystem_B/othersAddCourse");
         } catch (Exception e){
-            return "post error!";
+            return "fail";
         }
     }
 
@@ -29,7 +29,7 @@ public class ElectiveServiceImpl implements ElectiveService {
         try{
             return transferService.postRequest(post, "http://localhost:8083/othersAddCourse");
         } catch (Exception e){
-            return "post error!";
+            return "fail";
         }
     }
 
@@ -39,7 +39,7 @@ public class ElectiveServiceImpl implements ElectiveService {
         try{
             return transferService.postRequest(post, "http://localhost:8081/othersAddCourse");
         } catch (Exception e){
-            return "post error!";
+            return "fail";
         }
     }
 
@@ -49,7 +49,7 @@ public class ElectiveServiceImpl implements ElectiveService {
         try{
             return transferService.postRequest(post, "http://localhost:8083/othersAddCourse");
         } catch (Exception e){
-            return "post error!";
+            return "fail";
         }
     }
 
@@ -59,7 +59,7 @@ public class ElectiveServiceImpl implements ElectiveService {
         try{
             return transferService.postRequest(post, "http://localhost:8081/othersAddCourse");
         } catch (Exception e){
-            return "post error!";
+            return "fail";
         }
     }
 
@@ -69,7 +69,7 @@ public class ElectiveServiceImpl implements ElectiveService {
         try{
             return transferService.postRequest(post, "B_uri");
         } catch (Exception e){
-            return "post error!";
+            return "fail";
         }
     }
 
@@ -77,9 +77,9 @@ public class ElectiveServiceImpl implements ElectiveService {
     public String A_drop_B(String xml) throws TransformerException {
         String post = transferService.xmlTransfer(xml, "src\\main\\resources\\xslt\\elective\\AtoB.xslt").substring(38);
         try{
-            return transferService.postRequest(post, "B_uri");
+            return transferService.postRequest(post, "http://localhost:8082/educationalSystem_B/othersDeleteCourse");
         } catch (Exception e){
-            return "post error!";
+            return "fail";
         }
     }
 
@@ -89,7 +89,7 @@ public class ElectiveServiceImpl implements ElectiveService {
         try{
             return transferService.postRequest(post, "http://localhost:8083/othersDropCourse");
         } catch (Exception e){
-            return "post error!";
+            return "fail";
         }
     }
 
@@ -99,7 +99,7 @@ public class ElectiveServiceImpl implements ElectiveService {
         try{
             return transferService.postRequest(post, "http://localhost:8081/othersDropCourse");
         } catch (Exception e){
-            return "post error!";
+            return "fail";
         }
     }
 
@@ -109,7 +109,7 @@ public class ElectiveServiceImpl implements ElectiveService {
         try{
             return transferService.postRequest(post, "http://localhost:8083/othersDropCourse");
         } catch (Exception e){
-            return "post error!";
+            return "fail";
         }
     }
 
@@ -119,7 +119,7 @@ public class ElectiveServiceImpl implements ElectiveService {
         try{
             return transferService.postRequest(post, "http://localhost:8081/othersDropCourse");
         } catch (Exception e){
-            return "post error!";
+            return "fail";
         }
     }
 
@@ -129,7 +129,7 @@ public class ElectiveServiceImpl implements ElectiveService {
         try{
             return transferService.postRequest(post, "B_uri");
         } catch (Exception e){
-            return "post error!";
+            return "fail";
         }
     }
 }

@@ -14,7 +14,6 @@ class Dict(dict):
 
 def objectToXml2(obj):  #对象里包含list
     dic = objectToDict(obj)
-    print(dic)
     xml = dicttoxml.dicttoxml(dic, custom_root="Request", root=True).decode("utf-8")
     return xml
 

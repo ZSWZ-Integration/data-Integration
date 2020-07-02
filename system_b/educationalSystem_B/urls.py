@@ -16,4 +16,6 @@ urlpatterns = [
     path('getSharedCourses',views.getSharedCourses),
     path('othersAddCourse',views.othersAddCourse),
     path('othersDeleteCourse',views.othersDeleteCourse),
+    path('getAllCourseStatistic',views.getAllCourseStatistic),
+    path('getAllStudentStatistic',views.getAllStudentStatistic),
 ]

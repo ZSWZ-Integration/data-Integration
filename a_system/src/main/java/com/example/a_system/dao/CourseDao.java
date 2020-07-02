@@ -20,7 +20,8 @@ public class CourseDao implements CourseRepository {
             jdbcTemplate.update("insert into `course` (Cno,Cname,teacher,Ctime,credit,Ctype,share) values (?,?,?,?,?,?,?)", Cno, Cname,  teacher,ctime, credit, type, isShared);
             return true;
         }catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println("不能重复添加课程");
             return false;
         }
     }
@@ -51,10 +52,12 @@ public class CourseDao implements CourseRepository {
     public boolean chooseCourse(String Sno,String Cno) {
         try{
             //String Sno=jdbcTemplate.queryForObject("select Sno from student where Sname=?",String.class,Sname);
+            System.out.println("chooseCourse Sno is "+Sno+" and Cno is "+Cno);
             jdbcTemplate.update("insert into `take_course` (Cno,Sno,grade) values (?,?,?)",Cno,Sno,0);
             return true;
         }catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println("不能重复选课");
             return false;
         }
     }
