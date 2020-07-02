@@ -6,14 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="center_system" />
         <module name="a_system" />
         <module name="system_c" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="a_system" target="1.8" />
-      <module name="center_system" target="1.8" />
+      <module name="center_system" target="1.5" />
       <module name="system_c" target="1.8" />
     </bytecodeTargetLevel>
   </component>

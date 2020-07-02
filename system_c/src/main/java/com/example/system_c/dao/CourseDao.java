@@ -72,7 +72,7 @@ public class CourseDao implements CourseRepository {
     }
 
     @Override
-    public List<Course> getStudentCourse(String Sno) {
+    public List<CoursePO> getStudentCourse(String Sno) {
         //String Sno=jdbcTemplate.queryForObject("select Sno from student where Sname=?",String.class,Sname);
         try {
             return jdbcTemplate.query("select * from course where course.No in (select Cno from elective where Sno=?)", new CourseMapper(), Sno);
@@ -83,7 +83,7 @@ public class CourseDao implements CourseRepository {
     }
 
     @Override
-    public List<Course> getAllCourse() {
+    public List<CoursePO> getAllCourse() {
         return jdbcTemplate.query("select * from course",new CourseMapper());
     }
 
