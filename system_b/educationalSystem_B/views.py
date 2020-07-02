@@ -4,8 +4,15 @@ from django.http import HttpResponse
 import educationalSystem_B.service.course.courseService as course;
 import educationalSystem_B.service.user.userService as user;
 import educationalSystem_B.service.statistic.statisticService as statistic;
+import educationalSystem_B.service.web.WebService as web;
+
+from wsgiref.simple_server import make_server
 
 def index(request):
+    print("index")
+    server = make_server('127.0.0.1', 8100, web.wsgi_app)
+    server.serve_forever()
+    print("publish webService...")
     return HttpResponse("This is SystemB index")
 
 def addCourse(request):
@@ -94,4 +101,10 @@ def getAllCourseStatistic(request):
 def getAllStudentStatistic(request):
     print("getAllStudentStatistic")
     result = statistic.getAllStudentStatistic()
+    return HttpResponse(result)
+
+#WebService
+def getAWebService(request):
+    AWebServiceUrl = "http://localhost:8099/Service/getAWebService?wsdl"
+    result=web.getAWebService(AWebServiceUrl)
     return HttpResponse(result)
