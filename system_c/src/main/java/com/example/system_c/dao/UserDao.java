@@ -46,7 +46,7 @@ public class UserDao implements UserRepository {
     }
 
     @Override
-    public StudentVO getStudentInfo(String sno) {
+    public Student getStudentInfo(String sno) {
         return jdbcTemplate.queryForObject("select * from student where no=?",new StudentMapper(),sno);
     }
 }
