@@ -52,10 +52,12 @@ public class CourseService {
                 String xml = xmlService.object2Xml(choiceVO);
                 System.out.println("xml is "+xml);
                 if(Cno.substring(0,1).equals("B")){  //选B院系的课
-                    result=xmlService.postRequest(xml,"http://localhost:8080/transfer/A_choose_B");
+                    System.out.println("B");
+                    result=xmlService.postRequest(xml,"http://localhost:8080/elective/A_choose_B");
                 }
                 else if(Cno.substring(0,1).equals("C")){  //选C院系的课
-                    result=xmlService.postRequest(xml,"http://localhost:8080/transfer/A_choose_C");
+                    System.out.println("C");
+                    result=xmlService.postRequest(xml,"http://localhost:8080/elective/A_choose_C");
                 }
                 if(result.equals("fail"))
                     return false;
@@ -80,10 +82,10 @@ public class CourseService {
                 String result="fail";
                 String xml = xmlService.object2Xml(choice);
                 if(Cno.substring(0,1).equals("B")){  //退B院系的课
-                    result= xmlService.postRequest(xml,"http://localhost:8080/transfer/A_drop_B");
+                    result= xmlService.postRequest(xml,"http://localhost:8080/elective/A_drop_B");
                 }
                 else if(Cno.substring(0,1).equals("C")){  //选C院系的课
-                    result=xmlService.postRequest(xml,"http://localhost:8080/transfer/A_drop_C");
+                    result=xmlService.postRequest(xml,"http://localhost:8080/elective/A_drop_C");
                 }
                 if(result.equals("fail"))
                     return false;
@@ -109,15 +111,17 @@ public class CourseService {
     public boolean getOtherCourses(String type){    //获取外院系的共享课程，type是外院B或C。注意：此处要把外院系课程的share变为0后才能存入本地数据库
         try {
             String xml="";
-            if (type.equals("B")) {   //获取外院B的共享课程
+            //获取其他两个院系的课
+            //if (type.equals("B")) {   //获取外院B的共享课程
                 //从集成服务器获取xml
-                xml = xmlService.getRequest("http://localhost:8080/transfer/get_B_courses");
+            xml = xmlService.getRequest("http://localhost:8080/share/getSharedCourseForA");
 
-            } else if (type.equals("C")) {      //获取外院C的共享课程
+           // } else if (type.equals("C")) {      //获取外院C的共享课程
                 //从集成服务器获取xml
-                xml = xmlService.getRequest("http://localhost:8080/transfer/get_C_courses");
-            }
+               // xml = xmlService.getRequest("http://localhost:8080/transfer/get_C_courses");
+           // }
             //解析xml成CourseListVO对象
+            System.out.println(xml);
             CourseListVO courseListVO= (CourseListVO) xmlService.xml2Object(xml,CourseListVO.class);
             //将课程数据存入本院数据库
             for(Course c:courseListVO.getCourseList()){
@@ -138,6 +142,11 @@ public class CourseService {
             //封装成大的xml文件，发送给集成服务器
             CourseListVO courseListVO=new CourseListVO(courses);
             String xml = xmlService.object2Xml(courseListVO);//大的xml文件
+            System.out.println(xml);
+
+            String test=xmlService.getRequest("http://localhost:8080/transfer/get_test");
+            System.out.println("test is : "+test);
+
             return xml;
         }catch (Exception e){
             e.printStackTrace();

@@ -51,6 +51,7 @@ public class CourseDao implements CourseRepository {
     public boolean chooseCourse(String Sno,String Cno) {
         try{
             //String Sno=jdbcTemplate.queryForObject("select Sno from student where Sname=?",String.class,Sname);
+            System.out.println("chooseCourse Sno is "+Sno+" and Cno is "+Cno);
             jdbcTemplate.update("insert into `take_course` (Cno,Sno,grade) values (?,?,?)",Cno,Sno,0);
             return true;
         }catch (Exception e) {

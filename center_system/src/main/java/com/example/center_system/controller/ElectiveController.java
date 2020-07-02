@@ -18,6 +18,8 @@ public class ElectiveController {
 
     @PostMapping(path = "/A_choose_B", consumes = "application/xml")
     public String AChooseB(@RequestBody String string) throws TransformerException {
+        System.out.println("A_choose_B...");
+        System.out.println(string);
         return electiveService.A_choose_B(string);
     }
 
@@ -28,6 +30,8 @@ public class ElectiveController {
 
     @PostMapping(path = "/B_choose_A", consumes = "application/xml")
     public String BChooseA(@RequestBody String string) throws TransformerException {
+        System.out.println("B_chooose_A...");
+        System.out.println(string);
         return electiveService.B_choose_A(string);
     }
 

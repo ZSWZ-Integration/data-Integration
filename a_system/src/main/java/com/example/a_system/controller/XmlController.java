@@ -8,20 +8,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 public class XmlController {  //Todo:完善接收xml的controller
     @Autowired
     CourseService courseService;
     @Autowired
     StatisticService statisticService;
 
-    @GetMapping("/getSharedCourses")
+    @GetMapping(path="/getSharedCourses")
     public String  getSharedCourses(){ //获取本院系的共享课程，返回xml的字符串
-        return courseService.shareCourses();
+        String result=courseService.shareCourses();
+        System.out.println("In getSharedCourses Controller...");
+        System.out.println(result);
+        return result;
     }
 
     @PostMapping(path = "/othersAddCourse", consumes = "application/xml")
     public String othersAddCourse(@RequestBody String string)throws JsonProcessingException {    //外院系学生的选课，获取选课和学生的xml文件
+        System.out.println("othersAddCourse...");
+        System.out.println(string);
         return courseService.othersAddCourse(string);
     }
 

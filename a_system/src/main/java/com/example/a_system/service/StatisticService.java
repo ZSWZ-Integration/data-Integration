@@ -38,7 +38,7 @@ public class StatisticService {
     public String getAllStudentStatistic(){
         try{
             List<StatisticStudent> statisticStudentVOS=statisticRepository.getAllStudentStatistic();
-            //Todo:封装成大的xml,向集成服务器发送统计的xml数据
+            //封装成大的xml,向集成服务器发送统计的xml数据
             StatisticStudentListVO statisticStudentListVO=new StatisticStudentListVO(statisticStudentVOS);
             String xml = xmlService.object2Xml(statisticStudentListVO);      //大xml
             return xml;

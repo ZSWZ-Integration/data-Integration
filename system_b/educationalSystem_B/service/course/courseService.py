@@ -36,15 +36,16 @@ cur = conn.cursor()
 
 
 
-def addCourse(Cname,place,teacher,credit,share):
+def addCourse(Cno,Cname,campus,teacher,credit,share):
     print("addCourse...")
     try:
-        sql=" select count(*) from course where id like 'b%'"
-        num=(cur.execute(sql).fetchall())[0][0];
-        Cno="b"+str(num+1);
-        print("Cno is "+Cno);
+        if(Cno==""):
+            sql=" select count(*) from course where id like 'B%'"
+            num=(cur.execute(sql).fetchall())[0][0];
+            Cno="B"+str(num+1);
+            print("Cno is "+Cno);
         sql="insert into course(id,name,credit,teacher,campus,share) values ('%s','%s','%s','%s','%s','%s')"
-        cur.execute(sql % (Cno,Cname,credit,teacher,place,share))
+        cur.execute(sql % (Cno,Cname,credit,teacher,campus,share))
         conn.commit()
         print( "添加课程成功！")
         return True
@@ -101,16 +102,17 @@ def chooseCourse(Sno,Cno):
             student.setPwd("noPassword")  #重设密码
             choice=ChoiceVO(Cno,student,"0")  #choiceVO
             xml=xs.objectToXml(choice)
+            print(xml)
             result="";
             if(Cno[0:1]=="A"): #选A院系的课
-                result=xs.postRequest(xml,"http://localhost:8080/transfer/B_choose_A")
+                result=xs.postRequest(xml,"http://localhost:8080/elective/B_choose_A")
             elif(Cno[0:1]=="C"):   #选C院系的课
-                result=xs.postRequest(xml, "http://localhost:8080/transfer/B_choose_C")
+                result=xs.postRequest(xml, "http://localhost:8080/elective/B_choose_C")
 
-            if(result=="fail"):
-                return False
-            else:
+            if(result=="success"):
                 return True
+            else:
+                return False
     except BaseException as e:
         print(e)
         print("选课失败...")
@@ -131,9 +133,9 @@ def dropCourse(Sno,Cno):
             choice = ChoiceVO(Cno, student, "0")  # choiceVO
             xml=xs.objectToXml(choice)
             if (Cno[0:1] == "A"):  # 退A院系的课
-                result = xs.postRequest(xml, "http://localhost:8080/transfer/B_drop_A")
+                result = xs.postRequest(xml, "http://localhost:8080/elective/B_drop_A")
             elif (Cno[0:1] == "C"):  # 退C院系的课
-                result = xs.postRequest(xml, "http://localhost:8080/transfer/B_drop_C")
+                result = xs.postRequest(xml, "http://localhost:8080/elective/B_drop_C")
 
             if (result == "fail"):
                 return False
@@ -179,16 +181,16 @@ def getAllCourse():
         print("获取全部课程失败...")
         return False
 
-def getOtherCourses(type):  #获取外院的共享课程
+def getOtherCourses():  #获取外院的共享课程
     print("getOtherCourses")
     try:        #使用集成服务器获取外院系课程
-        if(type=="A"):  #获取外院A的共享课程
-            xml=xs.getRequest("http://localhost:8080/transfer/get_A_courses")
-        elif(type=="C"):    #获取外院C的共享课程
-            xml = xs.getRequest("http://localhost:8080/transfer/get_C_courses")
+        #if(type=="A"):  #获取外院A的共享课程
+        xml=xs.getRequest("http://localhost:8080/share/getSharedCourseForB")
+        #elif(type=="C"):    #获取外院C的共享课程
+            #xml = xs.getRequest("http://localhost:8080/transfer/get_C_courses")
         courseList=(xs.xmlToObject(xml)).Request.courses.item;
         for course in courseList:
-            addCourse(course.get("name").decode(),course.get("place").decode(),course.get("teacher").decode(),course.get("credit").decode(),course.get("share").decode())
+            addCourse(course.get("id").decode(),course.get("name").decode(),course.get("campus").decode(),course.get("teacher").decode(),course.get("credit").decode(),course.get("share").decode())
         return True
     except BaseException as e:
         print(e)
