@@ -1,0 +1,49 @@
+package com.example.system_c.vo;
+
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
+@JacksonXmlRootElement(localName = "C系统学生选课信息")
+public class ChoiceVO {
+    private String cno;
+    private Student student;
+    private String grade;
+
+    public ChoiceVO(String cno, Student student, String grade) {
+        this.cno = cno;
+        this.student = student;
+        this.grade = grade;
+    }
+
+    public ChoiceVO() {
+        super();
+    }
+
+    @JacksonXmlProperty(localName = "课程编号C")
+    public String getCno() {
+        return cno;
+    }
+
+    public void setCno(String cno) {
+        this.cno = cno;
+    }
+
+    @JacksonXmlProperty(localName = "学生信息C")
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
+    @JacksonXmlProperty(localName = "学生成绩C")
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+}
