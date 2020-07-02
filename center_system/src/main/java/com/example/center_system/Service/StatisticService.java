@@ -1,18 +1,21 @@
 package com.example.center_system.Service;
 
+import javax.xml.transform.TransformerException;
+import java.io.IOException;
+
 public interface StatisticService {
 
-    String getCourseListFromA();
+    String getCourseListFromA() throws IOException, TransformerException;
 
-    String getCourseListFromB();
+    String getCourseListFromB() throws IOException, TransformerException;
 
-    String getCourseListFromC();
+    String getCourseListFromC() throws IOException, TransformerException;
 
-    String getStudentListFromA();
+    String getStudentListFromA() throws IOException, TransformerException;
 
-    String getStudentListFromB();
+    String getStudentListFromB() throws IOException, TransformerException;
 
-    String getStudentListFromC();
+    String getStudentListFromC() throws IOException, TransformerException;
 
     //todo:与前端交互的业务逻辑
 

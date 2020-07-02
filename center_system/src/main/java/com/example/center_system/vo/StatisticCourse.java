@@ -17,6 +17,10 @@ public class StatisticCourse {
         this.count = count;
     }
 
+    public StatisticCourse() {
+        super();
+    }
+
     @JacksonXmlProperty(localName = "课程编号")
     public String getCno() {
         return cno;
