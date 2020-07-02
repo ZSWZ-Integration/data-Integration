@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @CrossOrigin(allowCredentials = "true", allowedHeaders = "*")
 @RestController
-//@RequestMapping("/")
+@RequestMapping("/")
 public class CourseController {
     @Autowired
     CourseService courseService;
@@ -36,7 +36,9 @@ public class CourseController {
 
     @GetMapping("/chooseCourse")
     public Response chooseCourse(@RequestParam(value = "cno",required = true) String cno,@RequestParam(value = "sno",required = true) String sno){
-        return Response.ResponseSuccess(courseService.chooseCourse(sno,cno));
+        Boolean result=courseService.chooseCourse(sno,cno);
+        System.out.println(result);
+        return Response.ResponseSuccess(result);
     }
 
     @GetMapping("/dropCourse")
