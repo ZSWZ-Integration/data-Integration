@@ -14,6 +14,7 @@ import java.util.List;
 public class CourseDao implements CourseRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
+
     @Override
     public boolean addCourse(String No,String Name,String Teacher,String Credit,String isShare) {
         try {
