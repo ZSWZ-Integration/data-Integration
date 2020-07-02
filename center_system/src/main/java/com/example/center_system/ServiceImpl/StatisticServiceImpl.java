@@ -22,7 +22,7 @@ public class StatisticServiceImpl implements StatisticService {
 
     @Override
     public String getCourseListFromB() throws IOException, TransformerException {
-        String xml = transferService.getRequest("B_uri");
+        String xml = transferService.getRequest("http://localhost:8082/educationalSystem_B/getAllCourseStatistic");
         return transferService.xmlTransfer(xml, "src\\main\\resources\\xslt\\statistic\\courseB.xslt").substring(38);
     }
 
@@ -40,7 +40,7 @@ public class StatisticServiceImpl implements StatisticService {
 
     @Override
     public String getStudentListFromB() throws IOException, TransformerException {
-        String xml = transferService.getRequest("B_uri");
+        String xml = transferService.getRequest("http://localhost:8082/educationalSystem_B/getAllStudentStatistic");
         return transferService.xmlTransfer(xml, "src\\main\\resources\\xslt\\statistic\\studentB.xslt").substring(38);
     }
 

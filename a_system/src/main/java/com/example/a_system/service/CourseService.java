@@ -121,7 +121,6 @@ public class CourseService {
                // xml = xmlService.getRequest("http://localhost:8080/transfer/get_C_courses");
            // }
             //解析xml成CourseListVO对象
-            System.out.println(xml);
             CourseListVO courseListVO= (CourseListVO) xmlService.xml2Object(xml,CourseListVO.class);
             //将课程数据存入本院数据库
             for(Course c:courseListVO.getCourseList()){

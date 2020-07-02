@@ -16,15 +16,16 @@ public class ShareServiceImpl implements ShareService {
 
     @Override
     public String AGetSharedCourse() throws IOException, TransformerException {
-        String xmlB = transferService.getRequest("http://localhost:8082/getSharedCourses");
+        String xmlB = transferService.getRequest("http://localhost:8082/educationalSystem_B/getSharedCourses");
         System.out.println("--------------B------------------");
         System.out.println(xmlB);
         //String xmlC = transferService.getRequest("http://localhost:8083/getSharedCourses");
         String xmlC="";
         System.out.println("--------------C------------------");
         System.out.println(xmlC);
-        String result = transferService.xmlTransfer(xmlB, "src\\main\\resources\\xslt\\shareCourse\\BtoA.xslt").substring(38) +
-                transferService.xmlTransfer(xmlC, "src\\main\\resources\\xslt\\shareCourse\\CtoA.xslt");
+//        String result = transferService.xmlTransfer(xmlB, "src\\main\\resources\\xslt\\shareCourse\\BtoA.xslt").substring(38) +
+//                transferService.xmlTransfer(xmlC, "src\\main\\resources\\xslt\\shareCourse\\CtoA.xslt");
+        String result = transferService.xmlTransfer(xmlB, "src\\main\\resources\\xslt\\shareCourse\\BtoA.xslt").substring(38);
         return "<A院系共享课程信息><课程列表A>" + result + "</课程列表A></A院系共享课程信息>";
     }
 

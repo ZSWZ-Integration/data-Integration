@@ -69,13 +69,11 @@ def login(request):
 def getSharedCourses(request):      #获取本院系的共享课程
     print("getSharedCourses...")
     result=course.shareCourses()
-    print(result)
     return HttpResponse(result)
 
 def othersAddCourse(request):       #外院系的选课
     print("othersAddCourse...")
     xml=request.body
-    print(xml)
     result=course.othersAddCourse(xml)
     return HttpResponse(result)
 
@@ -89,9 +87,11 @@ def othersDeleteCourse(request):    #外院系的退课
 
 #统计模块
 def getAllCourseStatistic(request):
+    print("getAllCourseStatistic")
     result=statistic.getAllCourseStatistic()
     return HttpResponse(result)
 
 def getAllStudentStatistic(request):
+    print("getAllStudentStatistic")
     result = statistic.getAllStudentStatistic()
     return HttpResponse(result)

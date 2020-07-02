@@ -24,10 +24,12 @@ public class StatisticService {
 
     public String getAllCourseStatistic(){
         try {
+            System.out.println("getAllCourseStatistic");
             List<StatisticCourse> statisticCourseVOS = statisticRepository.getAllCourseStatistic();
             //封装成大的xml,向集成服务器发送统计的xml数据
             StatisticCourseListVO statisticCourseListVO=new StatisticCourseListVO(statisticCourseVOS);
             String xml = xmlService.object2Xml(statisticCourseListVO);      //大xml
+            //System.out.println(xml);
             return xml;
         }catch (Exception e){
             e.printStackTrace();
@@ -37,10 +39,12 @@ public class StatisticService {
 
     public String getAllStudentStatistic(){
         try{
+            System.out.println("getAllStudentStatistic");
             List<StatisticStudent> statisticStudentVOS=statisticRepository.getAllStudentStatistic();
             //封装成大的xml,向集成服务器发送统计的xml数据
             StatisticStudentListVO statisticStudentListVO=new StatisticStudentListVO(statisticStudentVOS);
             String xml = xmlService.object2Xml(statisticStudentListVO);      //大xml
+            //System.out.println(xml);
             return xml;
         }catch (Exception e){
         e.printStackTrace();
