@@ -22,6 +22,10 @@ public class StatisticStudent {
 
     }
 
+    public StatisticStudent() {
+        super();
+    }
+
     @JacksonXmlProperty(localName = "学生编号")
     public String getSno() {
         return sno;
