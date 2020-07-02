@@ -1,22 +1,43 @@
 package com.example.center_system.ServiceImpl;
 
 import com.example.center_system.Service.ShareService;
+import com.example.center_system.Service.TransferService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.xml.transform.TransformerException;
+import java.io.IOException;
 
 @Service
 public class ShareServiceImpl implements ShareService {
+
+    @Autowired
+    TransferService transferService;
+
     @Override
-    public String AGetSharedCourse() {
-        return null;
+    public String AGetSharedCourse() throws IOException, TransformerException {
+        String xmlB = transferService.getRequest("B_uri");
+        String xmlC = transferService.getRequest("http://localhost:8083/getSharedCourses");
+        String result = transferService.xmlTransfer(xmlB, "src\\main\\resources\\xslt\\shareCourse\\BtoA.xslt").substring(38) +
+                transferService.xmlTransfer(xmlC, "src\\main\\resources\\xslt\\shareCourse\\CtoA.xslt");
+        return "<A院系共享课程信息><课程列表A>" + result + "</课程列表A></A院系共享课程信息>";
     }
 
     @Override
-    public String BGetSharedCourse() {
-        return null;
+    public String BGetSharedCourse() throws IOException, TransformerException {
+        String xmlA = transferService.getRequest("http://localhost:8081/getSharedCourses");
+        String xmlC = transferService.getRequest("http://localhost:8083/getSharedCourses");
+        String result = transferService.xmlTransfer(xmlA, "src\\main\\resources\\xslt\\shareCourse\\AtoB.xslt").substring(38) +
+                transferService.xmlTransfer(xmlC, "src\\main\\resources\\xslt\\shareCourse\\CtoB.xslt");
+        return "<Request><courses>" + result + "</courses></Request>";
     }
 
     @Override
-    public String CGetSharedCourse() {
-        return null;
+    public String CGetSharedCourse() throws IOException, TransformerException {
+        String xmlA = transferService.getRequest("http://localhost:8081/getSharedCourses");
+        String xmlB = transferService.getRequest("B_uri");
+        String result = transferService.xmlTransfer(xmlA, "src\\main\\resources\\xslt\\shareCourse\\AtoC.xslt").substring(38) +
+                transferService.xmlTransfer(xmlB, "src\\main\\resources\\xslt\\shareCourse\\BtoC.xslt");
+        return "<C院系共享课程信息><课程列表C>" + result + "</课程列表C></C院系共享课程信息>";
     }
 }

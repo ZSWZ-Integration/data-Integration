@@ -1,5 +1,5 @@
 
-class Choice:
+class ChoiceVO:
     def __init__(self, cno, student, grade):
         self.cno = cno
         self.student = student

@@ -27,7 +27,7 @@ public class ElectiveServiceImpl implements ElectiveService {
     public String A_choose_C(String xml) throws TransformerException {
         String post = transferService.xmlTransfer(xml, "src\\main\\resources\\xslt\\elective\\AtoC.xslt");
         try{
-            return transferService.postRequest(post, "http://localhost:8082/othersAddCourse");
+            return transferService.postRequest(post, "http://localhost:8083/othersAddCourse");
         } catch (Exception e){
             return "post error!";
         }
@@ -47,7 +47,7 @@ public class ElectiveServiceImpl implements ElectiveService {
     public String B_choose_C(String xml) throws TransformerException {
         String post = transferService.xmlTransfer(xml, "src\\main\\resources\\xslt\\elective\\BtoC.xslt");
         try{
-            return transferService.postRequest(post, "http://localhost:8082/othersAddCourse");
+            return transferService.postRequest(post, "http://localhost:8083/othersAddCourse");
         } catch (Exception e){
             return "post error!";
         }
@@ -87,7 +87,7 @@ public class ElectiveServiceImpl implements ElectiveService {
     public String A_drop_C(String xml) throws TransformerException {
         String post = transferService.xmlTransfer(xml, "src\\main\\resources\\xslt\\elective\\AtoC.xslt");
         try{
-            return transferService.postRequest(post, "http://localhost:8082/othersDropCourse");
+            return transferService.postRequest(post, "http://localhost:8083/othersDropCourse");
         } catch (Exception e){
             return "post error!";
         }
@@ -107,7 +107,7 @@ public class ElectiveServiceImpl implements ElectiveService {
     public String B_drop_C(String xml) throws TransformerException {
         String post = transferService.xmlTransfer(xml, "src\\main\\resources\\xslt\\elective\\BtoC.xslt");
         try{
-            return transferService.postRequest(post, "http://localhost:8082/othersDropCourse");
+            return transferService.postRequest(post, "http://localhost:8083/othersDropCourse");
         } catch (Exception e){
             return "post error!";
         }

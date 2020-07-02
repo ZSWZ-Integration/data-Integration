@@ -10,12 +10,12 @@ public class Course {
     private String ctime;
     private String credit;
     private String share;
+    private String ctype;
+
 
     public Course() {
         super();
     }
-
-    private String ctype;
 
 
     @JacksonXmlProperty(localName = "课程编号A")

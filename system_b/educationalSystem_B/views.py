@@ -68,7 +68,7 @@ def login(request):
 
 def getSharedCourses(request):      #获取本院系的共享课程
     result=course.shareCourses()
-    return HttpResponse(result)
+    return result
 
 def othersAddCourse(request):       #外院系的选课
     result=course.othersAddCourse()
