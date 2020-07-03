@@ -23,9 +23,9 @@ public class ShareServiceImpl implements ShareService {
         String xmlC="";
         System.out.println("--------------C------------------");
         System.out.println(xmlC);
-//        String result = transferService.xmlTransfer(xmlB, "src\\main\\resources\\xslt\\shareCourse\\BtoA.xslt").substring(38) +
-//                transferService.xmlTransfer(xmlC, "src\\main\\resources\\xslt\\shareCourse\\CtoA.xslt");
-        String result = transferService.xmlTransfer(xmlB, "src\\main\\resources\\xslt\\shareCourse\\BtoA.xslt").substring(38);
+        String result = transferService.xmlTransfer(xmlB, "src\\main\\resources\\xslt\\shareCourse\\BtoA.xslt").substring(38) +
+                transferService.xmlTransfer(xmlC, "src\\main\\resources\\xslt\\shareCourse\\CtoA.xslt");
+       // String result = transferService.xmlTransfer(xmlB, "src\\main\\resources\\xslt\\shareCourse\\BtoA.xslt").substring(38);
         return "<A院系共享课程信息><课程列表A>" + result + "</课程列表A></A院系共享课程信息>";
     }
 
@@ -46,7 +46,9 @@ public class ShareServiceImpl implements ShareService {
     @Override
     public String CGetSharedCourse() throws IOException, TransformerException {
         String xmlA = transferService.getRequest("http://localhost:8081/getSharedCourses");
-        String xmlB = transferService.getRequest("B_uri");
+        System.out.println(xmlA);
+        String xmlB = transferService.getRequest("http://localhost:8082/educationalSystem_B/getSharedCourses");
+        System.out.println(xmlB);
         String result = transferService.xmlTransfer(xmlA, "src\\main\\resources\\xslt\\shareCourse\\AtoC.xslt").substring(38) +
                 transferService.xmlTransfer(xmlB, "src\\main\\resources\\xslt\\shareCourse\\BtoC.xslt");
         return "<C院系共享课程信息><课程列表C>" + result + "</课程列表C></C院系共享课程信息>";

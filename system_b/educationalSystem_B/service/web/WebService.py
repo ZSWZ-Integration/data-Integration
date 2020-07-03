@@ -1,4 +1,4 @@
-from suds.client import Client  # 导入suds.client 模块下的Client类
+#from suds.client import Client  # 导入suds.client 模块下的Client类
 
 # Application is the glue between one or more service definitions, interface and protocol choices.
 from spyne import Application
