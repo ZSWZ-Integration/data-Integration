@@ -21,7 +21,8 @@ public class CourseDao implements CourseRepository {
             jdbcTemplate.update("insert into COURSE (No,Name,Teacher,Credit,isShare) values (?,?,?,?,?)", No,Name,Teacher,Credit,isShare);
             return true;
         }catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println("不能重复添加课程");
             return false;
         }
     }
@@ -64,7 +65,7 @@ public class CourseDao implements CourseRepository {
     public boolean dropCourse(String Sno,String Cno) {
         try{
             //String Sno=jdbcTemplate.queryForObject("select Sno from student where Sname=?",String.class,Sname);
-            jdbcTemplate.update("delete from `take_course` where Cno=? and Sno=?",Cno,Sno);
+            jdbcTemplate.update("delete from Elective where Cno=? and Sno=?",Cno,Sno);
             return true;
         }catch (Exception e) {
             e.printStackTrace();

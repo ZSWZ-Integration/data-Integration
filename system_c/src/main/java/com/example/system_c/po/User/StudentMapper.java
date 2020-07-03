@@ -12,13 +12,12 @@ import java.sql.SQLException;
 public class StudentMapper implements RowMapper<Student> {
     @Override
     public Student mapRow(ResultSet resultSet, int i)throws SQLException {
-        String acc=resultSet.getString("acc");
-        String password=resultSet.getString("password");
-        String createDate=resultSet.getString("createDate");
-        String sno=resultSet.getString("sno");
-        String sname=resultSet.getString("sname");
+        String acc=resultSet.getString("username");
+        String password=resultSet.getString("passwd");
+        String sno=resultSet.getString("no");
+        String sname=resultSet.getString("name");
         String sex=resultSet.getString("sex");
-        return new Student(acc,password,createDate,sno,sname,sex);
+        return new Student(acc,password,sno,sname,sex);
     }
 
 }

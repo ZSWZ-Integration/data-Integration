@@ -80,6 +80,36 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>oracle</groupId>-->
+			<!--<artifactId>ojdbc6</artifactId>-->
+            <!--<version>11.2.0.4</version>-->
+		<!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.oracle</groupId>-->
+            <!--<artifactId>ojdbc</artifactId>-->
+            <!--<version>10.2.0.3.0</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>com.oracle.database.jdbc</groupId>-->
+            <!--<artifactId>ojdbc10</artifactId>-->
+            <!--<version>19.7.0.0</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.3</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+
+        <!-- 这里使用的是JPA包，也可使用JDBC包进行 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
 
 	</dependencies>
 
