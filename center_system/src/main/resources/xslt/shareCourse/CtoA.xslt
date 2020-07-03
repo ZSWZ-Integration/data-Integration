@@ -7,7 +7,7 @@
                 <课程编号A><xsl:value-of select="课程编号C"/></课程编号A>
                 <课程名A><xsl:value-of select="课程名C"/></课程名A>
                 <授课教师A><xsl:value-of select="授课教师C"/></授课教师A>
-                <课程时间A><xsl:value-of select="课程时间C"/></课程时间A>
+                <课程时间A>50</课程时间A>
                 <课程学分A><xsl:value-of select="课程学分C"/></课程学分A>
                 <是否共享A><xsl:value-of select="是否共享C"/></是否共享A>
                 <所属学院A>C</所属学院A>

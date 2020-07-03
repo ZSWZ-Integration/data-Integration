@@ -20,49 +20,111 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01246591-f4c4-4acc-b175-39c2b524be3a" name="Default Changelist" comment="新起了system_c">
-      <change afterPath="$PROJECT_DIR$/system_c/src/main/java/com/example/system_c/po/Course/Choice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system_c/src/main/java/com/example/system_c/po/Course/ChoiceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system_c/src/main/java/com/example/system_c/po/Course/CourseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system_c/src/main/java/com/example/system_c/po/Course/CoursePO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system_c/src/main/java/com/example/system_c/po/Course/CourseVOMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system_c/src/main/java/com/example/system_c/po/User/StudentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system_c/src/main/java/com/example/system_c/po/statistic/StatisticCourseVOMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system_c/src/main/java/com/example/system_c/po/statistic/StatisticStudentVOMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system_c/src/main/java/com/example/system_c/po/t.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_36.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_36.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_3_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_3_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_3_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_3_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_3_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_3_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_3_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_3_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_3_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_3_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_oracle_ojdbc6_11_2_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_2_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_core_3_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_bindings_soap_3_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_bindings_xml_3_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_databinding_jaxb_3_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_frontend_jaxws_3_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_frontend_simple_3_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_transports_http_3_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_transports_http_jetty_3_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_ws_addr_3_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_ws_policy_3_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_wsdl_3_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_neethi_neethi_3_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ws_xmlschema_xmlschema_core_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_continuation_9_4_28_v20200408.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_4_28_v20200408.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_4_28_v20200408.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_9_4_28_v20200408.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_9_4_28_v20200408.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_4_28_v20200408.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_15_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_1_3_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__wsdl4j_wsdl4j_1_6_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_resolver_xml_resolver_1_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system_c/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/system_c/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system_c/src/main/java/com/example/system_c/dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/system_c/src/main/java/com/example/system_c/dao/CourseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system_c/src/main/java/com/example/system_c/dao/Repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/system_c/src/main/java/com/example/system_c/dao/Repository/CourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system_c/src/main/java/com/example/system_c/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/system_c/src/main/java/com/example/system_c/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system_c/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/system_c/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/sql/a_system.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/ASystemApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/controller/CourseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/controller/XmlController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/controller/t.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/dao/CourseDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/dao/Repository/CourseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/dao/Repository/StatisticRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/dao/Repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/dao/StatisticDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/dao/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/dao/t.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/po/Course/Choice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/po/Course/ChoiceMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/po/Course/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/po/Course/CourseMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/po/Course/CourseVOMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/po/User/StudentMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/po/statistic/StatisticCourseVOMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/po/statistic/StatisticStudentVOMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/po/t.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/service/CourseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/service/StatisticService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/service/XmlService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/service/t.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/vo/ChoiceVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/vo/CourseVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/vo/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/vo/StatisticCourseVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/vo/StatisticStudentVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/vo/StudentVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/java/com/example/a_system/vo/t.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/test/java/com/example/a_system/ASystemApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/test/java/com/example/a_system/controller/UserControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/test/java/com/example/a_system/dao/CourseDaoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/test/java/com/example/a_system/dao/StatisticDaoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_system/src/test/java/com/example/a_system/dao/UserDaoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/ServiceImpl/StatisticServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/center_system/src/main/java/com/example/center_system/ServiceImpl/StatisticServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/center_system/src/main/resources/xslt/elective/AtoC.xslt" beforeDir="false" afterPath="$PROJECT_DIR$/center_system/src/main/resources/xslt/elective/AtoC.xslt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/center_system/src/main/resources/xslt/elective/BtoC.xslt" beforeDir="false" afterPath="$PROJECT_DIR$/center_system/src/main/resources/xslt/elective/BtoC.xslt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/center_system/src/main/resources/xslt/elective/CtoA.xslt" beforeDir="false" afterPath="$PROJECT_DIR$/center_system/src/main/resources/xslt/elective/CtoA.xslt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/center_system/src/main/resources/xslt/shareCourse/AtoC.xslt" beforeDir="false" afterPath="$PROJECT_DIR$/center_system/src/main/resources/xslt/shareCourse/AtoC.xslt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/center_system/src/main/resources/xslt/shareCourse/BtoC.xslt" beforeDir="false" afterPath="$PROJECT_DIR$/center_system/src/main/resources/xslt/shareCourse/BtoC.xslt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/center_system/src/main/resources/xslt/shareCourse/CtoA.xslt" beforeDir="false" afterPath="$PROJECT_DIR$/center_system/src/main/resources/xslt/shareCourse/CtoA.xslt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +156,6 @@
     </option>
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
@@ -323,13 +384,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -424,10 +484,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593673241196" />
-    <state x="753" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593673145994">
+    <state x="753" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593768031816">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="753" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593673145994" />
+    <state x="753" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593768031816" />
     <state x="334" y="180" key="new project wizard" timestamp="1593672741858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
