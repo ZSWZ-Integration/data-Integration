@@ -19,8 +19,8 @@ public class ShareServiceImpl implements ShareService {
         String xmlB = transferService.getRequest("http://localhost:8082/educationalSystem_B/getSharedCourses");
         System.out.println("--------------B------------------");
         System.out.println(xmlB);
-        //String xmlC = transferService.getRequest("http://localhost:8083/getSharedCourses");
-        String xmlC="";
+        String xmlC = transferService.getRequest("http://localhost:8083/getSharedCourses");
+        //String xmlC="";
         System.out.println("--------------C------------------");
         System.out.println(xmlC);
         String result = transferService.xmlTransfer(xmlB, "src\\main\\resources\\xslt\\shareCourse\\BtoA.xslt").substring(38) +
