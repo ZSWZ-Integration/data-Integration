@@ -8,7 +8,6 @@
             <学生信息C>
                 <学生账号C><xsl:value-of select="A系统学生选课信息/学生信息A/学生账号A"/></学生账号C>
                 <学生密码C><xsl:value-of select="A系统学生选课信息/学生信息A/学生密码A"/></学生密码C>
-                <创建日期C><xsl:value-of select="A系统学生选课信息/学生信息A/创建日期A"/></创建日期C>
                 <学生编号C><xsl:value-of select="A系统学生选课信息/学生信息A/学生编号A"/></学生编号C>
                 <学生姓名C><xsl:value-of select="A系统学生选课信息/学生信息A/学生姓名A"/></学生姓名C>
                 <学生性别C><xsl:value-of select="A系统学生选课信息/学生信息A/学生性别A"/></学生性别C>

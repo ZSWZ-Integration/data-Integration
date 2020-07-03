@@ -18,4 +18,5 @@ urlpatterns = [
     path('othersDeleteCourse',views.othersDeleteCourse),
     path('getAllCourseStatistic',views.getAllCourseStatistic),
     path('getAllStudentStatistic',views.getAllStudentStatistic),
+    path('getAWebService',views.getAWebService),
 ]

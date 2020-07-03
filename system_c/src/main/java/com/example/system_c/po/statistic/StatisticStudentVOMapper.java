@@ -11,8 +11,8 @@ import java.sql.SQLException;
 public class StatisticStudentVOMapper implements RowMapper<StatisticStudent> {
     @Override
     public StatisticStudent mapRow(ResultSet resultSet, int i)throws SQLException {
-        String sno=resultSet.getString("sno");
-        String sname=resultSet.getString("sname");
+        String sno=resultSet.getString("no");
+        String sname=resultSet.getString("name");
         String sex=resultSet.getString("sex");
         String cno=resultSet.getString("cno");
         String cname=resultSet.getString("cname");

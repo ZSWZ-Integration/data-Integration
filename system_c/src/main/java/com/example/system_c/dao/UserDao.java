@@ -30,6 +30,7 @@ public class UserDao implements UserRepository {
             return true;
         }catch (Exception e){
             e.printStackTrace();
+            System.out.println("不能重复添加学生");
             return false;
         }
     }

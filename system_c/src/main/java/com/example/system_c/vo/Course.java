@@ -7,10 +7,8 @@ public class Course {
     private String cno;
     private String cname;
     private String teacher;
-    private String ctime;
     private String credit;
     private String share;
-    private String ctype;
 
 
     public Course() {
@@ -45,15 +43,6 @@ public class Course {
         this.teacher = teacher;
     }
 
-    @JacksonXmlProperty(localName = "课程时间C")
-    public String getCtime() {
-        return ctime;
-    }
-
-    public void setCtime(String ctime) {
-        this.ctime = ctime;
-    }
-
     @JacksonXmlProperty(localName = "课程学分C")
     public String getCredit() {
         return credit;
@@ -72,24 +61,13 @@ public class Course {
         this.share = share;
     }
 
-    @JacksonXmlProperty(localName = "所属学院C")
-    public String getCtype() {
-        return ctype;
-    }
 
-    public void setCtype(String ctype) {
-        this.ctype = ctype;
-    }
-
-
-    public Course(String cno, String cname, String teacher, String ctime, String credit, String share, String ctype) {
+    public Course(String cno, String cname, String teacher, String credit, String share) {
         this.cno = cno;
         this.cname = cname;
         this.teacher = teacher;
-        this.ctime = ctime;
         this.credit = credit;
         this.share = share;
-        this.ctype = ctype;
     }
 
 

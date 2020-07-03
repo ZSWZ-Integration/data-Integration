@@ -11,13 +11,11 @@ import java.sql.SQLException;
 public class CourseMapper implements RowMapper<CoursePO> {
     @Override
     public CoursePO mapRow(ResultSet resultSet, int i)throws SQLException {
-        String Cno=resultSet.getString("Cno");
-        String Cname=resultSet.getString("Cname");
-        String teacher=resultSet.getString("teacher");
-        String Ctime=resultSet.getString("Ctime");
+        String Cno=resultSet.getString("NO");
+        String Cname=resultSet.getString("NAME");
+        String teacher=resultSet.getString("TEACHER");
         String credit=resultSet.getString("credit");
-        String share=resultSet.getString("share");
-        String Ctype=resultSet.getString("Ctype");
-        return new CoursePO(Cno,Cname,teacher,Ctime,credit,share,Ctype);
+        String share=resultSet.getString("isShare");
+        return new CoursePO(Cno,Cname,teacher,credit,share);
     }
 }
