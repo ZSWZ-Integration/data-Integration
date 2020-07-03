@@ -10,9 +10,6 @@ from wsgiref.simple_server import make_server
 
 def index(request):
     print("index")
-    server = make_server('127.0.0.1', 8100, web.wsgi_app)
-    server.serve_forever()
-    print("publish webService...")
     return HttpResponse("This is SystemB index")
 
 def addCourse(request):
@@ -65,6 +62,11 @@ def getOtherCourses(request):
     return HttpResponse(result)
 
 def login(request):
+    #发布webService
+    server = make_server('127.0.0.1', 8100, web.wsgi_app)
+    server.serve_forever()
+    print("publish webService...")
+
     username=request.GET.get("username")
     password=request.GET.get("password")
     result=user.login(username,password)
@@ -104,7 +106,12 @@ def getAllStudentStatistic(request):
     return HttpResponse(result)
 
 #WebService
-def getAWebService(request):
+def getAShareCoursesNum(request):
     AWebServiceUrl = "http://localhost:8099/Service/getAWebService?wsdl"
     result=web.getAWebService(AWebServiceUrl)
+    return HttpResponse(result)
+
+def getCShareCoursesNum(request):
+    CWebServiceUrl = "http://localhost:8101/Service/getCWebService?wsdl"
+    result = web.getCWebService(CWebServiceUrl)
     return HttpResponse(result)
