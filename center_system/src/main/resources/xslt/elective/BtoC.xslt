@@ -8,7 +8,6 @@
             <学生信息C>
                 <学生账号C>account</学生账号C>
                 <学生密码C><xsl:value-of select="xml/student/pwd"/></学生密码C>
-                <创建日期C>2019-06-30 16:00:00</创建日期C>
                 <学生编号C><xsl:value-of select="xml/student/id"/></学生编号C>
                 <学生姓名C><xsl:value-of select="xml/student/name"/></学生姓名C>
                 <学生性别C><xsl:value-of select="xml/student/sex"/></学生性别C>

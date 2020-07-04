@@ -66,6 +66,7 @@ insert into student(id,name,sex,age,pwd) values ('b047','候佩','女','20','000000
 insert into student(id,name,sex,age,pwd) values ('b048','齐珏','女','20','000000')
 insert into student(id,name,sex,age,pwd) values ('b049','林慧','女','20','000000')
 insert into student(id,name,sex,age,pwd) values ('b050','丁艺','女','19','000000')
+insert into student(id,name,sex,age,pwd) values ('root','root','1','1','root')
 
 create table course
 (

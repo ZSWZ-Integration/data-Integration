@@ -49,4 +49,5 @@ public class StatisticServiceImpl implements StatisticService {
         String xml = transferService.getRequest("http://localhost:8083/getAllStudentStatistic");
         return transferService.xmlTransfer(xml, "src\\main\\resources\\xslt\\statistic\\studentC.xslt").substring(38);
     }
+
 }
