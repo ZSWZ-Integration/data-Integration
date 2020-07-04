@@ -37,7 +37,6 @@
                 <v-spacer />
                 <v-spacer />
                 <v-spacer />
-                <v-btn @click="logout">退出登录</v-btn>
         </v-app-bar>
         <v-content>
             <v-tabs
@@ -139,16 +138,10 @@ export default {
                 }
             })
             this.dialogStudentClass = true;
-        },logout(){
-            this.$store.commit("setUserId", 0);
-            this.$router.push('/login');
         }
     },
     mounted(){
-        this.sno = this.$store.getters.userId;
-        if(this.sno == 0){
-            this.$router.push("/login");
-        }
+
         showStatisticData().then(res => {
             var _this = this;
             this.courseData = res.data.content.statisticCourseData.statisticCourseList;

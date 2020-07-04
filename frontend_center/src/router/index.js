@@ -9,21 +9,13 @@ const routes = [
     path: '/',
     // name: 'HalouCao',
     // component: HalouCao
-    redirect: "/login"
+    redirect: "/MainPage"
   }, {
     path: '/MainPage',
     name: 'MainPage',
     component: () => import("@/views/MainPage.vue"),
     meta: {
       title: "主界面",
-      keepAlive: true
-    }
-  }, {
-    path: '/login',
-    name: 'AdminLogin',
-    component: () => import("@/views/AdminLogin.vue"),
-    meta: {
-      title: "管理员登录",
       keepAlive: true
     }
   }, {
