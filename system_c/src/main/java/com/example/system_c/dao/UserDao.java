@@ -29,7 +29,7 @@ public class UserDao implements UserRepository {
             jdbcTemplate.update("insert into student(username,passwd,no,name,sex) values(?,?,?,?,?)",username,password,no,name,sex);
             return true;
         }catch (Exception e){
-            e.printStackTrace();
+            //e.printStackTrace();
             System.out.println("不能重复添加学生");
             return false;
         }
