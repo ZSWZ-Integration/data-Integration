@@ -198,6 +198,8 @@
             <v-tab-item>
                     <v-col cols="6"> <v-btn @click="getShare('A')">获取A院系课程</v-btn></v-col>
                     <v-col cols="6"> <v-btn @click="getShare('C')">获取C院系课程</v-btn></v-col>
+                    <v-col cols="6"> <v-btn @click="checkShare('A')">查看A院系共享课程数量</v-btn></v-col>
+                    <v-col cols="6"> <v-btn @click="checkShare('C')">查看C院系共享课程数量</v-btn></v-col>
                 
             </v-tab-item>
                
@@ -206,7 +208,7 @@
 </v-app>
 </template>
 <script>
-import {deleteCourse, updateCourse, addCourse, getShareCoursesNum1, getShareCoursesNum2, getAllCourses} from "../request/api";
+import {deleteCourse, updateCourse, addCourse, getShareCoursesNum1, getShareCoursesNum2, getAllCourses, getOtherCourses} from "../request/api";
 export default {
     data(){
         return {
@@ -235,7 +237,7 @@ export default {
                 v => !!v || "请填写学分",
                 v => !isNaN(v) || "学分应为数值",
                 v => Number.isInteger(Number(v)) || "学分应为整数"
-            ]
+            ],
         }
     },
     methods: {
@@ -319,35 +321,23 @@ export default {
             this.dialogNew = false;
         },
         getShare(type){
-            if(type == "A"){
-                getShareCoursesNum1().then(res => {
-                    if(res.data.content == true){
-                        this.Alert("成功");
-                        this.getClasses();
-                    }else {
-                        this.Alert("失败")
-                    }
-                }).catch(err => {
-                    err;
-                    this.Alert("Something went wrong.");
-                })
-            }else {
-                getShareCoursesNum2().then(res => {
-                    if(res.data.content == true){
-                        this.Alert("成功");
-                        this.getClasses();
-                    }else {
-                        this.Alert("失败")
-                    }
-                }).catch(err => {
-                    err;
-                    this.Alert("Something went wrong.");
-                })
-            }
+            getOtherCourses(type).then(res => {
+                if(res.data.content == true){
+                    this.Alert("成功");
+                    this.getClasses();
+                }else {
+                    this.Alert("失败")
+                }
+            }).catch(err => {
+                err;
+                this.Alert("Something went wrong.");
+            })
         },
         getClasses(){
             getAllCourses().then(res => {
                 this.classes = res.data.content;
+                console.log("getAllCourses result:");
+                console.log(res.data);
                 this.classes.forEach(course => {
                 if(course.cno.substring(0, 1) == "C"){
                     course.editable = true;
@@ -363,6 +353,23 @@ export default {
         logout(){
             this.$store.commit("setUserId", 0);
             this.$router.push('/adminLogin');
+        },
+        checkShare(type){
+            if(type == "A"){
+                getShareCoursesNum1().then(res => {
+                     this.Alert(res.data.content);
+                }).catch(err => {
+                        err;
+                        this.Alert("something went wronge.");
+                });
+            }else {
+                getShareCoursesNum2().then(res => {
+                     this.Alert(res.data.content);
+                }).catch(err => {
+                        err;
+                        this.Alert("something went wronge.");
+                });
+            }
         }
     },
     mounted(){

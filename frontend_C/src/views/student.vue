@@ -109,6 +109,8 @@ export default {
         
         getAllCourses().then(res => {
             this.classes = res.data.content;
+            console.log("getAllCourses result:");
+            console.log(res.data);
             this.classes.forEach(course => {
                 //判断课程是否可选，非本院且share为0则不可选。
                 // if(course.cno.substring(0, 1) != "A" && course.share == "0"){
