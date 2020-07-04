@@ -16,7 +16,7 @@ public class aWebService {
     @WebMethod
     public String AWebService(){
         System.out.println("This is the public method SystemA offers...");
-        return "This is A WebService...";
+        return "A学院的共享课程数量是6门";
     }
 
     @WebMethod(exclude = true)
@@ -25,7 +25,7 @@ public class aWebService {
 //        WebServiceService wss = new WebServiceService();
 //        WebService ws=wss.getPort(WebService.class);
 //        String result = ws.cWebService();
-        return "B学院的共享课程数量是"+""+"人";
+        return "B学院的共享课程数量是"+"8"+"门";
     }
 
     @WebMethod(exclude = true)

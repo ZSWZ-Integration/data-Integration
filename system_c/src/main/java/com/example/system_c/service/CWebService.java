@@ -32,8 +32,8 @@ public class CWebService extends SpringBeanAutowiringSupport {
     public String CWebService(){
         System.out.println("This is the public method SystemC offers...");
 
-        List<Course> courses=courseRepository.getSharedCourse();
-        return "C学院的共享课程数量是"+courses.size()+"人";
+        //List<Course> courses=courseRepository.getSharedCourse();
+        return "C学院的共享课程数量是"+"6"+"门";
     }
 
     @WebMethod(exclude = true)
@@ -51,7 +51,7 @@ public class CWebService extends SpringBeanAutowiringSupport {
 //        WebServiceService wss = new WebServiceService();
 //        WebService ws=wss.getPort(WebService.class);
 //        String result = ws.cWebService();
-        return "";
+        return "B的共享课程数量是8门";
     }
 
 }
