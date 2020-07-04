@@ -15,6 +15,7 @@ public class StatisticShowController {
 
     @GetMapping("/showStatisticData")
     public Response showStatisticData(){
+        System.out.println("showStatisticData");
         return Response.ResponseSuccess(new StatisticData(StatisticCache.courseCache,StatisticCache.studentCache));
     }
 }

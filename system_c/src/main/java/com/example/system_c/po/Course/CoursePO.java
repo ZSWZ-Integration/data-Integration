@@ -6,34 +6,34 @@ import org.springframework.stereotype.Component;
 @JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler" })
 public class CoursePO {
 
-    private String Cno;
-    private String Cname;
+    private String cno;
+    private String cname;
     private String teacher;
     private String credit;
     private String share;
 
     public CoursePO(String cno, String cname, String teacher, String credit, String share) {
-        Cno = cno;
-        Cname = cname;
+        cno = cno;
+        cname = cname;
         this.teacher = teacher;
         this.credit = credit;
         this.share = share;
     }
 
     public String getCno() {
-        return Cno;
+        return cno;
     }
 
     public void setCno(String cno) {
-        Cno = cno;
+        cno = cno;
     }
 
     public String getCname() {
-        return Cname;
+        return cname;
     }
 
     public void setCname(String cname) {
-        Cname = cname;
+        cname = cname;
     }
 
     public String getTeacher() {
