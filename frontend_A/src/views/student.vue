@@ -113,11 +113,12 @@ export default {
             this.classes = res.data.content;
             //判断课程是否可选，非本院且share为0则不可选。
             this.classes.forEach(course => {
-                if(course.cno.substring(0, 1) != "A" && course.share == "0"){
-                    course.couldChoose = false;
-                }else {
-                    course.couldChoose = true;
-                }
+                // if(course.cno.substring(0, 1) != "A" && course.share == "0"){
+                //     course.couldChoose = false;
+                // }else {
+                //     course.couldChoose = true;
+                // }
+                course.couldChoose = true;
             })
         }).catch(err => {
             err;
