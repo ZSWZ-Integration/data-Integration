@@ -13,8 +13,8 @@ public class CoursePO {
     private String share;
 
     public CoursePO(String cno, String cname, String teacher, String credit, String share) {
-        cno = cno;
-        cname = cname;
+        this.cno = cno;
+        this.cname = cname;
         this.teacher = teacher;
         this.credit = credit;
         this.share = share;
@@ -25,7 +25,7 @@ public class CoursePO {
     }
 
     public void setCno(String cno) {
-        cno = cno;
+        this.cno = cno;
     }
 
     public String getCname() {
@@ -33,7 +33,7 @@ public class CoursePO {
     }
 
     public void setCname(String cname) {
-        cname = cname;
+        this.cname = cname;
     }
 
     public String getTeacher() {

@@ -17,8 +17,14 @@ public class UserDao implements UserRepository {
     @Override
     public Student login(String username, String password) {
         try {
-            return jdbcTemplate.queryForObject("select * from student where username=? and passwd=?", new StudentMapper(), username, password);
+            if(username.equals("root")&&password.equals("root")){   //oracle数据库无法登录root...
+                return new Student("root","root","root","root","1");
+            }
+            String sql="select * from student where username='"+username+"' and passwd='"+password+"'";
+            System.out.println(sql);
+            return jdbcTemplate.queryForObject(sql, new StudentMapper());
         }catch (Exception e){
+            e.printStackTrace();
             return null;
         }
     }

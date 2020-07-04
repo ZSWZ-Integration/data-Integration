@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6be8cfc-2c64-4e32-8676-1ce9116dc891" name="Default Changelist" comment="" />
+    <list default="true" id="d6be8cfc-2c64-4e32-8676-1ce9116dc891" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a_system/src/main/java/com/example/a_system/service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../system_c/src/main/java/com/example/system_c/dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../system_c/src/main/java/com/example/system_c/dao/CourseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../system_c/src/main/java/com/example/system_c/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../system_c/src/main/java/com/example/system_c/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../system_c/src/main/java/com/example/system_c/po/Course/CoursePO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../system_c/src/main/java/com/example/system_c/po/Course/CoursePO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../system_c/src/main/java/com/example/system_c/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../system_c/src/main/java/com/example/system_c/service/CourseService.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +292,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="735" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30420968" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

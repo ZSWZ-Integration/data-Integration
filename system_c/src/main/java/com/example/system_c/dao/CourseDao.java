@@ -56,7 +56,8 @@ public class CourseDao implements CourseRepository {
             jdbcTemplate.update("insert into ELECTIVE(Cno,Sno,grade) values(?,?,?)",Cno,Sno,0);
             return true;
         }catch (Exception e) {
-            e.printStackTrace();
+           // e.printStackTrace();
+            System.out.println("不能重复选课");
             return false;
         }
     }

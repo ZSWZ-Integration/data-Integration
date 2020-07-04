@@ -44,6 +44,10 @@ public class CourseService {
             return courseRepository.chooseCourse(Sno,Cno);
         else{               //选择外院系的课
             try {
+                boolean isChosen=courseRepository.chooseCourse(Sno,Cno);
+                if(!isChosen)
+                    return false;
+
                 Student student = userRepository.getStudentInfo(Sno); //Student
                 student.setPassword("noPassword");     //修改掉password,不让学生登录外院系的教务系统
                 ChoiceVO choiceVO = new ChoiceVO(Cno, student, "0");  //ChoiceVO
@@ -75,6 +79,8 @@ public class CourseService {
             return courseRepository.dropCourse(Sno,Cno);
         else{               //退外院系的课
             try {
+                courseRepository.dropCourse(Sno,Cno);//删除在本院的数据库数据
+
                 Student student=userRepository.getStudentInfo(Sno); //StudentVO
                 ChoiceVO choice =new ChoiceVO(Cno,student,"0");  //ChoiceVO
 
