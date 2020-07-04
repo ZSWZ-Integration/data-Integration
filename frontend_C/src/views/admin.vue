@@ -348,6 +348,8 @@ export default {
         getClasses(){
             getAllCourses().then(res => {
                 this.classes = res.data.content;
+                console.log("getAllCourses result:");
+                console.log(res.data);
                 this.classes.forEach(course => {
                 if(course.cno.substring(0, 1) == "C"){
                     course.editable = true;
