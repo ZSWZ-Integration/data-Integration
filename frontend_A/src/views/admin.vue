@@ -217,7 +217,8 @@
             <v-tab-item>
                     <v-col cols="6"> <v-btn @click="getShare('B')">获取B院系课程</v-btn></v-col>
                     <v-col cols="6"> <v-btn @click="getShare('C')">获取C院系课程</v-btn></v-col>
-                
+                    <v-col cols="6"> <v-btn @click="checkShare('B')">查看A院系共享课程数量</v-btn></v-col>
+                    <v-col cols="6"> <v-btn @click="checkShare('C')">查看C院系共享课程数量</v-btn></v-col>
             </v-tab-item>
                
          </v-tabs>
@@ -225,7 +226,7 @@
 </v-app>
 </template>
 <script>
-import {deleteCourse, updateCourse, addCourse, getOtherCourses, getAllCourses} from "../request/api";
+import {deleteCourse, updateCourse, addCourse, getOtherCourses, getAllCourses, getShareCoursesNum1, getShareCoursesNum2} from "../request/api";
 export default {
     data(){
         return {
@@ -371,6 +372,23 @@ export default {
         logout(){
             this.$store.commit("setUserId", 0);
             this.$router.push('/adminLogin');
+        },
+        checkShare(type){
+            if(type == "B"){
+                getShareCoursesNum1().then(res => {
+                     this.Alert(res.data.content);
+                }).catch(err => {
+                        err;
+                        this.Alert("something went wronge.");
+                });
+            }else {
+                getShareCoursesNum2().then(res => {
+                     this.Alert(res.data.content);
+                }).catch(err => {
+                        err;
+                        this.Alert("something went wronge.");
+                });
+            }
         }
     },
     mounted(){

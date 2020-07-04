@@ -51,4 +51,8 @@ export const getOtherCourses = (type) => get("/getOtherCourses", {type: type});
 /**
  * 登录
  */
-export const userLogin = (userName, pw) => get("/login", {username: userName, password: pw})
+export const userLogin = (userName, pw) => get("/login", {username: userName, password: pw});
+
+export const getShareCoursesNum1 = () => get("/getShareCoursesNum1");
+
+export const getShareCoursesNum2 = () => get("/getShareCoursesNum2");

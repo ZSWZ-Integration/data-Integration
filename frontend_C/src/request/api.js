@@ -53,3 +53,5 @@ export const userLogin = (userName, pw) => get("/login", {username: userName, pa
 export const getShareCoursesNum1 = () => get("/getShareCoursesNum1");
 
 export const getShareCoursesNum2 = () => get("/getShareCoursesNum2");
+
+export const getOtherCourses = (type) => get("/getOtherCourses", {type: type});
