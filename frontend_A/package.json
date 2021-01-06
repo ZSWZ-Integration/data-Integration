@@ -10,7 +10,7 @@
   "dependencies": {
     "@vue/cli": "^4.2.3",
     "@vue/composition-api": "^0.5.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.4",
     "cytoscape": "^3.14.1",
     "highlight.js": "^9.18.1",
